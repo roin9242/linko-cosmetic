@@ -204,6 +204,51 @@
 .form-success p{font-size:13px;color:var(--mid);font-weight:300;line-height:1.7;}
 .form-success-btn{display:inline-block;margin-top:24px;padding:12px 28px;border-radius:12px;background:var(--dark);color:white;font-size:13px;font-weight:500;border:none;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:background .2s;}
 .form-success-btn:hover{background:#333;}
+
+/* ── 국기 SVG ── */
+.flag-img{width:32px;height:22px;border-radius:3px;object-fit:cover;}
+
+/* ── 반응형 ── */
+@media(max-width:768px){
+  .nav{padding:0 20px;height:56px;}
+  .nav-menu{display:none;}
+  .logo-name{font-size:18px;}
+  .car{height:380px;}
+  .bar{padding:16px 20px;}
+  .bp{font-size:15px;}
+  .bbtn{padding:7px 16px;font-size:11px;}
+  .main{padding:40px 20px;}
+  .pg{grid-template-columns:repeat(2,1fr);gap:10px;}
+  .cg{grid-template-columns:1fr;}
+  .sgd{grid-template-columns:repeat(3,1fr);gap:8px;}
+  .si{padding:12px 8px;}
+  .sf{font-size:20px;}
+  .sc{font-size:10px;}
+  .btm{grid-template-columns:1fr;}
+  .csg{grid-template-columns:repeat(3,1fr);}
+  .ft{padding:32px 20px;}
+  .ftt{flex-direction:column;gap:24px;}
+  .brand-layout{grid-template-columns:1fr;}
+  .brand-sidebar{position:relative;top:0;height:auto;display:flex;flex-wrap:wrap;gap:4px;padding:16px;}
+  .brand-item{padding:8px 16px;border-left:none;border-radius:20px;border:0.5px solid var(--bd);}
+  .brand-item.on{border-color:var(--gold);}
+  .brand-content{padding:20px;}
+  .brand-grid{grid-template-columns:repeat(2,1fr);}
+  .detail-body{padding:24px 20px;}
+  .detail-grid{grid-template-columns:1fr;gap:24px;}
+  .detail-name{font-size:26px;}
+  .specs-grid{grid-template-columns:repeat(2,1fr);}
+  .inq-wrap{padding:40px 20px;}
+  .form-row{grid-template-columns:1fr;}
+  .stl{font-size:24px;}
+  .sh{flex-direction:column;align-items:flex-start;gap:8px;}
+}
+@media(max-width:480px){
+  .pg{grid-template-columns:repeat(2,1fr);}
+  .sgd{grid-template-columns:repeat(3,1fr);}
+  .csg{grid-template-columns:1fr 1fr 1fr;}
+  .brand-grid{grid-template-columns:1fr;}
+}
 </style>
 </head>
 <body>
@@ -324,11 +369,11 @@
       <div class="slb" data-ko="글로벌 판매 채널" data-en="Global Sales Channel">글로벌 판매 채널</div>
       <div class="stl" data-ko="Shopee에서 만나보세요" data-en="Find Us on Shopee">Shopee에서 만나보세요</div>
       <div class="sgd">
-        <div class="si"><div class="sf">🇸🇬</div><div class="sc">Singapore</div><div class="shopee-logo">Shopee</div></div>
-        <div class="si"><div class="sf">🇻🇳</div><div class="sc">Vietnam</div><div class="shopee-logo">Shopee</div></div>
-        <div class="si"><div class="sf">🇹🇼</div><div class="sc">Taiwan</div><div class="shopee-logo">Shopee</div></div>
-        <div class="si"><div class="sf">🇹🇭</div><div class="sc">Thailand</div><div class="shopee-logo">Shopee</div></div>
-        <div class="si"><div class="sf">🇵🇭</div><div class="sc">Philippines</div><div class="shopee-logo">Shopee</div></div>
+        <div class="si"><img class="flag-img" src="https://flagcdn.com/w40/sg.png" alt="Singapore"><div class="sc">Singapore</div><div class="shopee-logo">Shopee</div></div>
+        <div class="si"><img class="flag-img" src="https://flagcdn.com/w40/vn.png" alt="Vietnam"><div class="sc">Vietnam</div><div class="shopee-logo">Shopee</div></div>
+        <div class="si"><img class="flag-img" src="https://flagcdn.com/w40/tw.png" alt="Taiwan"><div class="sc">Taiwan</div><div class="shopee-logo">Shopee</div></div>
+        <div class="si"><img class="flag-img" src="https://flagcdn.com/w40/th.png" alt="Thailand"><div class="sc">Thailand</div><div class="shopee-logo">Shopee</div></div>
+        <div class="si"><img class="flag-img" src="https://flagcdn.com/w40/ph.png" alt="Philippines"><div class="sc">Philippines</div><div class="shopee-logo">Shopee</div></div>
       </div>
     </div>
 
@@ -591,7 +636,7 @@ const products={
   suncream:{
     name:'Suncream Travel SPF50+',
     sub:{ko:'선크림 50ml · SPF50+ PA+++',en:'Suncream 50ml · SPF50+ PA+++'},
-    imgs:['images/suncream.jpeg','images/suncream1.jpeg','images/suncream2.jpeg','images/suncream5.jpeg'],
+    imgs:['images/suncream.jpeg','images/suncream2.jpeg','images/suncream5.jpeg'],
     desc:{ko:'여행에 최적화된 소용량 자외선 차단제. SPF50+ PA+++의 강력한 자외선 차단력으로 피부를 보호합니다.',en:'Travel-sized sunscreen optimized for on-the-go use. SPF50+ PA+++ provides powerful UV protection.'},
     tags:['SPF50+','PA+++','Travel Size'],
     specs:{ko:[{l:'용량',v:'50ml'},{l:'제형',v:'크림'},{l:'피부타입',v:'전 피부타입'},{l:'SPF',v:'50+ PA+++'},{l:'제조국',v:'대한민국'},{l:'브랜드',v:'K.SOLEGIO'}],en:[{l:'Volume',v:'50ml'},{l:'Type',v:'Cream'},{l:'Skin Type',v:'All Skin Types'},{l:'SPF',v:'50+ PA+++'},{l:'Made in',v:'Korea'},{l:'Brand',v:'K.SOLEGIO'}]},
@@ -613,17 +658,22 @@ function setLang(l){
 
 // ── 페이지 전환 ──
 let cur=0,total=4,tm,floatOpen=false,curProduct=null,prevPage='main-page';
-function showPage(id){
+function showPage(id, pushHistory=true){
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
   document.getElementById(id).classList.add('active');
   document.getElementById(id).scrollTop=0;
   if(floatOpen)toggleFloat();
-  // 문의 페이지 진입 시 항상 폼 초기화
   if(id==='inq-page') resetForm();
+  if(pushHistory) history.pushState({page:id}, '', '#'+id);
 }
 function goHome(){
   showPage('main-page');
 }
+window.addEventListener('popstate', function(e){
+  const id = e.state && e.state.page ? e.state.page : 'main-page';
+  showPage(id, false);
+});
+history.replaceState({page:'main-page'}, '', '#main-page');
 
 // ── 캐러셀 ──
 function goTo(n){
