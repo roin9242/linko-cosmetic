@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LINKO Cosmetic — K-Beauty B2B Platform</title>
-<meta name="description" content="LINKO Cosmetic은 국내 우수 코스메틱 제조사와 글로벌 셀러를 직접 연결합니다.">
+<meta name="description" content="LINKO Cosmetic connects premium Korean cosmetic manufacturers with global sellers.">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400&family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
@@ -14,7 +14,6 @@
 .page.active{transform:translateX(0);}
 #main-page{transform:translateX(0);}
 
-/* NAV */
 .nav{height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 48px;background:rgba(250,248,245,0.96);border-bottom:0.5px solid var(--bd);position:sticky;top:0;z-index:50;backdrop-filter:blur(8px);}
 .logo-wrap{cursor:pointer;}
 .logo-name{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;letter-spacing:1.5px;color:var(--dark);}
@@ -29,7 +28,6 @@
 .ncta{font-size:12px;font-weight:500;padding:8px 20px;background:var(--dark);color:white;border:none;border-radius:20px;cursor:pointer;transition:background .2s;}
 .ncta:hover{background:#333;}
 
-/* CAROUSEL */
 .car{position:relative;width:100%;height:560px;overflow:hidden;background:var(--dark);}
 .sls{display:flex;height:100%;transition:transform .85s cubic-bezier(.77,0,.18,1);}
 .sl{min-width:100%;height:100%;position:relative;overflow:hidden;}
@@ -53,7 +51,6 @@
 .prg{position:absolute;bottom:0;left:0;height:2px;background:var(--gold);z-index:10;animation:pg 4s linear infinite;}
 @keyframes pg{0%{width:0%}100%{width:100%}}
 
-/* MAIN CONTENT */
 .main{padding:64px 48px;}
 .slb{font-size:10px;color:var(--gold);letter-spacing:2.5px;text-transform:uppercase;margin-bottom:6px;}
 .stl{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:500;letter-spacing:-.3px;}
@@ -101,7 +98,6 @@
 .cnm{font-size:12px;font-weight:500;}
 .cdc{font-size:10px;color:var(--mid);}
 
-/* FOOTER */
 .ft{background:var(--dark);padding:48px;margin-top:72px;}
 .ftt{display:flex;justify-content:space-between;padding-bottom:32px;border-bottom:0.5px solid rgba(255,255,255,.08);margin-bottom:28px;}
 .fl{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:500;color:white;letter-spacing:1px;}
@@ -119,7 +115,6 @@
 .fic svg{width:15px;height:15px;fill:rgba(255,255,255,.35);transition:fill .2s;}
 .fic:hover svg{fill:var(--dark);}
 
-/* FLOATING */
 .float-btn{position:fixed;right:24px;bottom:32px;z-index:300;display:flex;flex-direction:column;align-items:flex-end;gap:10px;}
 .float-panel{background:white;border:0.5px solid var(--bd);border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:8px;box-shadow:0 8px 32px rgba(0,0,0,.12);opacity:0;transform:translateY(8px) scale(.97);transition:all .25s;pointer-events:none;min-width:180px;}
 .float-panel.show{opacity:1;transform:translateY(0) scale(1);pointer-events:all;}
@@ -130,7 +125,6 @@
 .float-main{width:48px;height:48px;border-radius:50%;background:var(--dark);color:white;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,0,0,.2);transition:all .2s;font-size:20px;}
 .float-main:hover{background:#333;transform:scale(1.05);}
 
-/* BRAND PAGE */
 .brand-layout{display:grid;grid-template-columns:240px 1fr;min-height:calc(100vh - 64px);}
 .brand-sidebar{border-right:0.5px solid var(--bd);padding:32px 0;background:white;position:sticky;top:64px;height:calc(100vh - 64px);overflow-y:auto;}
 .sidebar-title{font-size:10px;color:var(--gold);letter-spacing:2px;text-transform:uppercase;padding:0 24px;margin-bottom:16px;}
@@ -145,7 +139,7 @@
 .brand-header-name{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:600;margin-bottom:6px;}
 .brand-header-desc{font-size:13px;color:var(--mid);font-weight:300;}
 .cat-tabs{display:flex;gap:8px;margin-bottom:28px;flex-wrap:wrap;}
-.cat-tab{padding:7px 16px;border-radius:20px;font-size:12px;font-weight:400;color:var(--mid);background:white;border:0.5px solid var(--bd);cursor:pointer;transition:all .2s;}
+.cat-tab{padding:7px 16px;border-radius:20px;font-size:12px;color:var(--mid);background:white;border:0.5px solid var(--bd);cursor:pointer;transition:all .2s;}
 .cat-tab.on{background:var(--dark);color:white;border-color:var(--dark);}
 .cat-tab:hover:not(.on){border-color:var(--goldl);color:var(--dark);}
 .brand-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
@@ -153,7 +147,6 @@
 .coming-brand-msg h3{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:500;}
 .coming-brand-msg p{font-size:13px;color:var(--mid);font-weight:300;line-height:1.7;}
 
-/* DETAIL PAGE */
 .detail-nav{height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 48px;background:rgba(250,248,245,0.96);border-bottom:0.5px solid var(--bd);position:sticky;top:0;z-index:50;}
 .back-btn{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--mid);cursor:pointer;transition:color .2s;background:none;border:none;font-family:'Noto Sans KR',sans-serif;}
 .back-btn:hover{color:var(--dark);}
@@ -191,7 +184,6 @@
 .spec-label{font-size:10px;color:var(--gold);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px;}
 .spec-val{font-size:14px;font-weight:500;}
 
-/* INQUIRY PAGE */
 .inq-wrap{max-width:640px;margin:0 auto;padding:60px 48px;}
 .inq-title{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:600;margin-bottom:8px;letter-spacing:-.3px;}
 .inq-desc{font-size:13px;color:var(--mid);font-weight:300;margin-bottom:40px;line-height:1.7;}
@@ -210,12 +202,14 @@
 .form-success-icon{font-size:40px;margin-bottom:16px;}
 .form-success h3{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:500;margin-bottom:8px;}
 .form-success p{font-size:13px;color:var(--mid);font-weight:300;line-height:1.7;}
+.form-success-btn{display:inline-block;margin-top:24px;padding:12px 28px;border-radius:12px;background:var(--dark);color:white;font-size:13px;font-weight:500;border:none;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:background .2s;}
+.form-success-btn:hover{background:#333;}
 </style>
 </head>
 <body>
 <div id="app">
 
-<!-- ===== MAIN PAGE ===== -->
+<!-- MAIN PAGE -->
 <div class="page active" id="main-page">
   <nav class="nav">
     <div class="logo-wrap" onclick="showPage('main-page')">
@@ -223,19 +217,17 @@
       <div class="logo-sub">Cosmetic</div>
     </div>
     <div class="nav-menu">
-      <a onclick="showPage('brand-page')">브랜드</a>
-      <a onclick="showPage('brand-page')">제품</a>
-      <a>공지사항</a>
-      <a onclick="showPage('inq-page')">고객센터</a>
-      <a>회사소개</a>
+      <a onclick="showPage('brand-page')" data-ko="브랜드" data-en="Brands">브랜드</a>
+      <a data-ko="공지사항" data-en="Notice">공지사항</a>
+      <a onclick="showPage('inq-page')" data-ko="문의하기" data-en="Contact">문의하기</a>
     </div>
     <div class="nav-r">
       <div class="lw">
-        <button class="lg on">KO</button>
-        <button class="lg">EN</button>
-        <button class="lg">VI</button>
+        <button class="lg on" onclick="setLang('ko')">KO</button>
+        <button class="lg" onclick="setLang('en')">EN</button>
+        <button class="lg" onclick="setLang('vi')">VI</button>
       </div>
-      <button class="ncta" onclick="showPage('inq-page')">문의하기</button>
+      <button class="ncta" onclick="showPage('inq-page')" data-ko="문의하기" data-en="Contact Us">문의하기</button>
     </div>
   </nav>
 
@@ -244,22 +236,34 @@
       <div class="sl on">
         <div class="bg" style="background-image:url('images/로션1.jpeg')"></div>
         <div class="ov"></div>
-        <div class="bar"><div class="bl"><span class="bb">K.SOLEGIO</span><div class="bsep"></div><span class="bp">24K Gold Collagen Lotion</span></div><button class="bbtn" onclick="openDetail('lotion')">제품 보기</button></div>
+        <div class="bar">
+          <div class="bl"><span class="bb">K.SOLEGIO</span><div class="bsep"></div><span class="bp">24K Gold Collagen Lotion</span></div>
+          <button class="bbtn" onclick="openDetail('lotion')" data-ko="제품 보기" data-en="View Product">제품 보기</button>
+        </div>
       </div>
       <div class="sl">
         <div class="bg" style="background-image:url('images/로션2.jpeg')"></div>
         <div class="ov"></div>
-        <div class="bar"><div class="bl"><span class="bb">K.SOLEGIO</span><div class="bsep"></div><span class="bp">24K Gold Collagen Skin</span></div><button class="bbtn" onclick="openDetail('skin')">제품 보기</button></div>
+        <div class="bar">
+          <div class="bl"><span class="bb">K.SOLEGIO</span><div class="bsep"></div><span class="bp">24K Gold Collagen Skin</span></div>
+          <button class="bbtn" onclick="openDetail('skin')" data-ko="제품 보기" data-en="View Product">제품 보기</button>
+        </div>
       </div>
       <div class="sl">
         <div class="bg" style="background-image:url('images/스킨3.jpeg')"></div>
         <div class="ov"></div>
-        <div class="bar"><div class="bl"><span class="bb">K.SOLEGIO</span><div class="bsep"></div><span class="bp">Gold Flake Essence</span></div><button class="bbtn" onclick="openDetail('essence')">제품 보기</button></div>
+        <div class="bar">
+          <div class="bl"><span class="bb">K.SOLEGIO</span><div class="bsep"></div><span class="bp">Gold Flake Essence</span></div>
+          <button class="bbtn" onclick="openDetail('essence')" data-ko="제품 보기" data-en="View Product">제품 보기</button>
+        </div>
       </div>
       <div class="sl">
         <div class="bg" style="background-image:url('images/선크림2.jpeg')"></div>
         <div class="ov"></div>
-        <div class="bar"><div class="bl"><span class="bb">K.SOLEGIO</span><div class="bsep"></div><span class="bp">Suncream Travel SPF50+</span></div><button class="bbtn" onclick="openDetail('suncream')">제품 보기</button></div>
+        <div class="bar">
+          <div class="bl"><span class="bb">K.SOLEGIO</span><div class="bsep"></div><span class="bp">Suncream Travel SPF50+</span></div>
+          <button class="bbtn" onclick="openDetail('suncream')" data-ko="제품 보기" data-en="View Product">제품 보기</button>
+        </div>
       </div>
     </div>
     <button class="cpv" onclick="move(-1)">&#8592;</button>
@@ -275,55 +279,83 @@
 
   <div class="main">
     <div class="sh">
-      <div><div class="slb">입점 브랜드</div><div class="stl">Our Brands</div></div>
-      <a class="va" onclick="showPage('brand-page')">전체 브랜드 보기 →</a>
+      <div>
+        <div class="slb" data-ko="입점 브랜드" data-en="Our Brands">입점 브랜드</div>
+        <div class="stl">Our Brands</div>
+      </div>
+      <a class="va" onclick="showPage('brand-page')" data-ko="전체 브랜드 보기 →" data-en="View All Brands →">전체 브랜드 보기 →</a>
     </div>
     <div class="bb2">
-      <div class="bt"><div><div class="bn">K.Solegio</div></div><div class="bab">● 입점 완료</div></div>
+      <div class="bt">
+        <div><div class="bn">K.Solegio</div></div>
+        <div class="bab" data-ko="● 입점 완료" data-en="● Active">● 입점 완료</div>
+      </div>
       <div class="pg">
-        <div class="pc" onclick="openDetail('lotion')"><div class="pt"><div class="pi" style="background-image:url('images/로션.jpeg')"></div><div class="pch">LOTION</div></div><div class="pb"><div class="pn">24K Gold Collagen Lotion</div><div class="pty">스킨/로션 130ml</div></div></div>
-        <div class="pc" onclick="openDetail('skin')"><div class="pt"><div class="pi" style="background-image:url('images/스킨.jpeg')"></div><div class="pch">SKIN</div></div><div class="pb"><div class="pn">24K Gold Collagen Skin</div><div class="pty">스킨 130ml</div></div></div>
-        <div class="pc" onclick="openDetail('essence')"><div class="pt"><div class="pi" style="background-image:url('images/에센스.jpeg')"></div><div class="pch">ESSENCE</div></div><div class="pb"><div class="pn">24K Gold Premium Essence</div><div class="pty">에센스 130ml</div></div></div>
-        <div class="pc" onclick="openDetail('suncream')"><div class="pt"><div class="pi" style="background-image:url('images/선크림.jpeg')"></div><div class="pch">SUNCREAM</div></div><div class="pb"><div class="pn">Suncream Travel SPF50+</div><div class="pty">선크림 50ml</div></div></div>
+        <div class="pc" onclick="openDetail('lotion')">
+          <div class="pt"><div class="pi" style="background-image:url('images/로션.jpeg')"></div><div class="pch">LOTION</div></div>
+          <div class="pb"><div class="pn">24K Gold Collagen Lotion</div><div class="pty" data-ko="스킨/로션 130ml" data-en="Skin/Lotion 130ml">스킨/로션 130ml</div></div>
+        </div>
+        <div class="pc" onclick="openDetail('skin')">
+          <div class="pt"><div class="pi" style="background-image:url('images/스킨.jpeg')"></div><div class="pch">SKIN</div></div>
+          <div class="pb"><div class="pn">24K Gold Collagen Skin</div><div class="pty" data-ko="스킨 130ml" data-en="Skin 130ml">스킨 130ml</div></div>
+        </div>
+        <div class="pc" onclick="openDetail('essence')">
+          <div class="pt"><div class="pi" style="background-image:url('images/에센스.jpeg')"></div><div class="pch">ESSENCE</div></div>
+          <div class="pb"><div class="pn">24K Gold Premium Essence</div><div class="pty" data-ko="에센스 130ml" data-en="Essence 130ml">에센스 130ml</div></div>
+        </div>
+        <div class="pc" onclick="openDetail('suncream')">
+          <div class="pt"><div class="pi" style="background-image:url('images/선크림.jpeg')"></div><div class="pch">SUNCREAM</div></div>
+          <div class="pb"><div class="pn">Suncream Travel SPF50+</div><div class="pty" data-ko="선크림 50ml" data-en="Suncream 50ml">선크림 50ml</div></div>
+        </div>
       </div>
     </div>
 
-    <div class="sh"><div><div class="slb">준비 중</div><div class="stl">입점 예정 브랜드</div></div></div>
+    <div class="sh"><div>
+      <div class="slb" data-ko="준비 중" data-en="Coming Soon">준비 중</div>
+      <div class="stl" data-ko="입점 예정 브랜드" data-en="Upcoming Brands">입점 예정 브랜드</div>
+    </div></div>
     <div class="cg">
-      <div class="cc"><div class="cr"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7" stroke="#C9A96E" stroke-width="1"/><path d="M9 5v4l2 2" stroke="#C9A96E" stroke-width="1" stroke-linecap="round"/></svg></div><div class="cn">Brand #2</div><div class="cb">입점 진행중</div></div>
-      <div class="cc"><div class="cr"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7" stroke="#C9A96E" stroke-width="1"/><path d="M9 5v4l2 2" stroke="#C9A96E" stroke-width="1" stroke-linecap="round"/></svg></div><div class="cn">Brand #3</div><div class="cb">입점 진행중</div></div>
-      <div class="cc"><div class="cr"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7" stroke="#C9A96E" stroke-width="1"/><path d="M9 5v4l2 2" stroke="#C9A96E" stroke-width="1" stroke-linecap="round"/></svg></div><div class="cn">Brand #4</div><div class="cb">입점 진행중</div></div>
+      <div class="cc"><div class="cr"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7" stroke="#C9A96E" stroke-width="1"/><path d="M9 5v4l2 2" stroke="#C9A96E" stroke-width="1" stroke-linecap="round"/></svg></div><div class="cn">Brand #2</div><div class="cb" data-ko="입점 진행중" data-en="Coming Soon">입점 진행중</div></div>
+      <div class="cc"><div class="cr"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7" stroke="#C9A96E" stroke-width="1"/><path d="M9 5v4l2 2" stroke="#C9A96E" stroke-width="1" stroke-linecap="round"/></svg></div><div class="cn">Brand #3</div><div class="cb" data-ko="입점 진행중" data-en="Coming Soon">입점 진행중</div></div>
+      <div class="cc"><div class="cr"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7" stroke="#C9A96E" stroke-width="1"/><path d="M9 5v4l2 2" stroke="#C9A96E" stroke-width="1" stroke-linecap="round"/></svg></div><div class="cn">Brand #4</div><div class="cb" data-ko="입점 진행중" data-en="Coming Soon">입점 진행중</div></div>
     </div>
 
     <div class="ss">
-      <div class="slb">글로벌 판매 채널</div><div class="stl">Shopee에서 만나보세요</div>
+      <div class="slb" data-ko="글로벌 판매 채널" data-en="Global Sales Channel">글로벌 판매 채널</div>
+      <div class="stl" data-ko="Shopee에서 만나보세요" data-en="Find Us on Shopee">Shopee에서 만나보세요</div>
       <div class="sgd">
-        <div class="si"><div class="sf">🇸🇬</div><div class="sc">싱가포르</div><div class="shopee-logo">Shopee</div></div>
-        <div class="si"><div class="sf">🇻🇳</div><div class="sc">베트남</div><div class="shopee-logo">Shopee</div></div>
-        <div class="si"><div class="sf">🇹🇼</div><div class="sc">대만</div><div class="shopee-logo">Shopee</div></div>
-        <div class="si"><div class="sf">🇹🇭</div><div class="sc">태국</div><div class="shopee-logo">Shopee</div></div>
-        <div class="si"><div class="sf">🇵🇭</div><div class="sc">필리핀</div><div class="shopee-logo">Shopee</div></div>
+        <div class="si"><div class="sf">🇸🇬</div><div class="sc">Singapore</div><div class="shopee-logo">Shopee</div></div>
+        <div class="si"><div class="sf">🇻🇳</div><div class="sc">Vietnam</div><div class="shopee-logo">Shopee</div></div>
+        <div class="si"><div class="sf">🇹🇼</div><div class="sc">Taiwan</div><div class="shopee-logo">Shopee</div></div>
+        <div class="si"><div class="sf">🇹🇭</div><div class="sc">Thailand</div><div class="shopee-logo">Shopee</div></div>
+        <div class="si"><div class="sf">🇵🇭</div><div class="sc">Philippines</div><div class="shopee-logo">Shopee</div></div>
       </div>
     </div>
 
     <div class="btm">
       <div class="cw">
-        <div class="ct">공지사항</div>
-        <div class="nr"><div class="nn">01</div><div><div class="nt">K.Solegio 신제품 출시 안내</div><div class="nd">2025.04.20</div></div></div>
-        <div class="nr"><div class="nn">02</div><div><div class="nt">베트남어 지원 업데이트 예정</div><div class="nd">2025.04.15</div></div></div>
-        <div class="nr"><div class="nn">03</div><div><div class="nt">LINKO Cosmetic 플랫폼 오픈</div><div class="nd">2025.04.01</div></div></div>
+        <div class="ct" data-ko="공지사항" data-en="Notice">공지사항</div>
+        <div class="nr"><div class="nn">01</div><div><div class="nt" data-ko="K.Solegio 신제품 출시 안내" data-en="K.Solegio New Product Launch">K.Solegio 신제품 출시 안내</div><div class="nd">2025.04.20</div></div></div>
+        <div class="nr"><div class="nn">02</div><div><div class="nt" data-ko="베트남어 지원 업데이트 예정" data-en="Vietnamese Language Support Coming Soon">베트남어 지원 업데이트 예정</div><div class="nd">2025.04.15</div></div></div>
+        <div class="nr"><div class="nn">03</div><div><div class="nt" data-ko="LINKO Cosmetic 플랫폼 오픈" data-en="LINKO Cosmetic Platform Launch">LINKO Cosmetic 플랫폼 오픈</div><div class="nd">2025.04.01</div></div></div>
       </div>
       <div class="cw">
-        <div class="ct">고객센터</div>
+        <div class="ct" data-ko="고객센터" data-en="Customer Service">고객센터</div>
         <div class="csg">
           <div class="csi" onclick="window.open('http://pf.kakao.com/_WDxjdX/chat','_blank')">
-            <div class="cic">💬</div><div class="cnm">카카오톡</div><div class="cdc">채널 바로가기</div>
+            <div class="cic">💬</div>
+            <div class="cnm">KakaoTalk</div>
+            <div class="cdc" data-ko="채널 바로가기" data-en="Chat with us">채널 바로가기</div>
           </div>
           <div class="csi" onclick="showPage('inq-page')">
-            <div class="cic">📋</div><div class="cnm">문의하기</div><div class="cdc">제품 및 도매 문의</div>
+            <div class="cic">📋</div>
+            <div class="cnm" data-ko="문의하기" data-en="Inquiry">문의하기</div>
+            <div class="cdc" data-ko="제품 및 도매 문의" data-en="Product & Wholesale">제품 및 도매 문의</div>
           </div>
           <div class="csi">
-            <div class="cic">❓</div><div class="cnm">Q&A</div><div class="cdc">자주 묻는 질문</div>
+            <div class="cic">❓</div>
+            <div class="cnm">Q&A</div>
+            <div class="cdc" data-ko="자주 묻는 질문" data-en="FAQ">자주 묻는 질문</div>
           </div>
         </div>
       </div>
@@ -332,10 +364,21 @@
 
   <div class="ft">
     <div class="ftt">
-      <div><div class="fl">LINKO Cosmetic</div><div class="fs">Connecting K-Beauty to the World</div></div>
+      <div>
+        <div class="fl">LINKO Cosmetic</div>
+        <div class="fs">Connecting K-Beauty to the World</div>
+      </div>
       <div class="fc">
-        <div><div class="fch">Platform</div><a class="flk" onclick="showPage('brand-page')">브랜드</a><a class="flk" onclick="showPage('brand-page')">제품</a><a class="flk">공지사항</a></div>
-        <div><div class="fch">Company</div><a class="flk">회사소개</a><a class="flk" onclick="showPage('inq-page')">문의하기</a><a class="flk">개인정보처리방침</a></div>
+        <div>
+          <div class="fch">Platform</div>
+          <a class="flk" onclick="showPage('brand-page')" data-ko="브랜드" data-en="Brands">브랜드</a>
+          <a class="flk" data-ko="공지사항" data-en="Notice">공지사항</a>
+        </div>
+        <div>
+          <div class="fch">Contact</div>
+          <a class="flk" onclick="showPage('inq-page')" data-ko="문의하기" data-en="Inquiry">문의하기</a>
+          <a class="flk" data-ko="개인정보처리방침" data-en="Privacy Policy">개인정보처리방침</a>
+        </div>
       </div>
     </div>
     <div class="fb">
@@ -350,53 +393,55 @@
   </div>
 </div>
 
-<!-- ===== BRAND PAGE ===== -->
+<!-- BRAND PAGE -->
 <div class="page" id="brand-page">
   <nav class="nav">
     <div class="logo-wrap" onclick="showPage('main-page')"><div class="logo-name">LINKO</div><div class="logo-sub">Cosmetic</div></div>
     <div class="nav-menu">
-      <a onclick="showPage('brand-page')">브랜드</a><a onclick="showPage('brand-page')">제품</a><a>공지사항</a><a onclick="showPage('inq-page')">고객센터</a><a>회사소개</a>
+      <a onclick="showPage('brand-page')" data-ko="브랜드" data-en="Brands">브랜드</a>
+      <a data-ko="공지사항" data-en="Notice">공지사항</a>
+      <a onclick="showPage('inq-page')" data-ko="문의하기" data-en="Contact">문의하기</a>
     </div>
     <div class="nav-r">
-      <div class="lw"><button class="lg on">KO</button><button class="lg">EN</button><button class="lg">VI</button></div>
-      <button class="ncta" onclick="showPage('inq-page')">문의하기</button>
+      <div class="lw"><button class="lg on" onclick="setLang('ko')">KO</button><button class="lg" onclick="setLang('en')">EN</button><button class="lg" onclick="setLang('vi')">VI</button></div>
+      <button class="ncta" onclick="showPage('inq-page')" data-ko="문의하기" data-en="Contact Us">문의하기</button>
     </div>
   </nav>
   <div class="brand-layout">
     <div class="brand-sidebar">
-      <div class="sidebar-title">브랜드</div>
-      <div class="brand-item on" onclick="selectBrand('ksolegio',this)"><div class="brand-item-name">K.Solegio</div><span class="brand-item-badge">입점</span></div>
-      <div class="brand-item" onclick="selectBrand('brand2',this)"><div class="brand-item-name">Brand #2</div><span class="brand-item-soon">준비중</span></div>
-      <div class="brand-item" onclick="selectBrand('brand3',this)"><div class="brand-item-name">Brand #3</div><span class="brand-item-soon">준비중</span></div>
-      <div class="brand-item" onclick="selectBrand('brand4',this)"><div class="brand-item-name">Brand #4</div><span class="brand-item-soon">준비중</span></div>
+      <div class="sidebar-title" data-ko="브랜드" data-en="Brands">브랜드</div>
+      <div class="brand-item on" onclick="selectBrand('ksolegio',this)"><div class="brand-item-name">K.Solegio</div><span class="brand-item-badge" data-ko="입점" data-en="Active">입점</span></div>
+      <div class="brand-item" onclick="selectBrand('brand2',this)"><div class="brand-item-name">Brand #2</div><span class="brand-item-soon" data-ko="준비중" data-en="Soon">준비중</span></div>
+      <div class="brand-item" onclick="selectBrand('brand3',this)"><div class="brand-item-name">Brand #3</div><span class="brand-item-soon" data-ko="준비중" data-en="Soon">준비중</span></div>
+      <div class="brand-item" onclick="selectBrand('brand4',this)"><div class="brand-item-name">Brand #4</div><span class="brand-item-soon" data-ko="준비중" data-en="Soon">준비중</span></div>
     </div>
     <div class="brand-content" id="brand-content">
       <div class="brand-header">
         <div class="brand-header-name">K.Solegio</div>
-        <div class="brand-header-desc">24K 골드 콜라겐 — 고보습 프리미엄 스킨케어 라인</div>
+        <div class="brand-header-desc" data-ko="24K 골드 콜라겐 — 고보습 프리미엄 스킨케어 라인" data-en="24K Gold Collagen — Premium High-Moisturizing Skincare Line">24K 골드 콜라겐 — 고보습 프리미엄 스킨케어 라인</div>
       </div>
       <div class="cat-tabs">
-        <div class="cat-tab on" onclick="filterCat('all',this)">전체</div>
-        <div class="cat-tab" onclick="filterCat('skincare',this)">스킨케어</div>
-        <div class="cat-tab" onclick="filterCat('essence',this)">에센스</div>
-        <div class="cat-tab" onclick="filterCat('suncare',this)">선케어</div>
+        <div class="cat-tab on" onclick="filterCat('all',this)" data-ko="전체" data-en="All">전체</div>
+        <div class="cat-tab" onclick="filterCat('skincare',this)" data-ko="스킨케어" data-en="Skincare">스킨케어</div>
+        <div class="cat-tab" onclick="filterCat('essence',this)" data-ko="에센스" data-en="Essence">에센스</div>
+        <div class="cat-tab" onclick="filterCat('suncare',this)" data-ko="선케어" data-en="Sun Care">선케어</div>
       </div>
       <div class="brand-grid" id="brand-grid">
-        <div class="pc" data-cat="skincare" onclick="openDetail('lotion')"><div class="pt"><div class="pi" style="background-image:url('images/로션.jpeg')"></div><div class="pch">LOTION</div></div><div class="pb"><div class="pn">24K Gold Collagen Lotion</div><div class="pty">스킨/로션 130ml</div></div></div>
-        <div class="pc" data-cat="skincare" onclick="openDetail('skin')"><div class="pt"><div class="pi" style="background-image:url('images/스킨.jpeg')"></div><div class="pch">SKIN</div></div><div class="pb"><div class="pn">24K Gold Collagen Skin</div><div class="pty">스킨 130ml</div></div></div>
-        <div class="pc" data-cat="essence" onclick="openDetail('essence')"><div class="pt"><div class="pi" style="background-image:url('images/에센스.jpeg')"></div><div class="pch">ESSENCE</div></div><div class="pb"><div class="pn">24K Gold Premium Essence</div><div class="pty">에센스 130ml</div></div></div>
-        <div class="pc" data-cat="suncare" onclick="openDetail('suncream')"><div class="pt"><div class="pi" style="background-image:url('images/선크림.jpeg')"></div><div class="pch">SUNCREAM</div></div><div class="pb"><div class="pn">Suncream Travel SPF50+</div><div class="pty">선크림 50ml</div></div></div>
+        <div class="pc" data-cat="skincare" onclick="openDetail('lotion')"><div class="pt"><div class="pi" style="background-image:url('images/로션.jpeg')"></div><div class="pch">LOTION</div></div><div class="pb"><div class="pn">24K Gold Collagen Lotion</div><div class="pty" data-ko="스킨/로션 130ml" data-en="Skin/Lotion 130ml">스킨/로션 130ml</div></div></div>
+        <div class="pc" data-cat="skincare" onclick="openDetail('skin')"><div class="pt"><div class="pi" style="background-image:url('images/스킨.jpeg')"></div><div class="pch">SKIN</div></div><div class="pb"><div class="pn">24K Gold Collagen Skin</div><div class="pty" data-ko="스킨 130ml" data-en="Skin 130ml">스킨 130ml</div></div></div>
+        <div class="pc" data-cat="essence" onclick="openDetail('essence')"><div class="pt"><div class="pi" style="background-image:url('images/에센스.jpeg')"></div><div class="pch">ESSENCE</div></div><div class="pb"><div class="pn">24K Gold Premium Essence</div><div class="pty" data-ko="에센스 130ml" data-en="Essence 130ml">에센스 130ml</div></div></div>
+        <div class="pc" data-cat="suncare" onclick="openDetail('suncream')"><div class="pt"><div class="pi" style="background-image:url('images/선크림.jpeg')"></div><div class="pch">SUNCREAM</div></div><div class="pb"><div class="pn">Suncream Travel SPF50+</div><div class="pty" data-ko="선크림 50ml" data-en="Suncream 50ml">선크림 50ml</div></div></div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ===== DETAIL PAGE ===== -->
+<!-- DETAIL PAGE -->
 <div class="page" id="detail-page">
   <nav class="detail-nav">
     <button class="back-btn" onclick="closeDetail()">
       <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-      돌아가기
+      <span data-ko="돌아가기" data-en="Back">돌아가기</span>
     </button>
     <div style="font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:500;color:var(--dark);">K.Solegio</div>
     <div style="width:120px;"></div>
@@ -412,16 +457,16 @@
         <div class="detail-name" id="dName"></div>
         <div class="detail-sub" id="dSub"></div>
         <div class="detail-divider"></div>
-        <div class="detail-label">제품 특징</div>
+        <div class="detail-label" data-ko="제품 특징" data-en="Features">제품 특징</div>
         <div class="detail-text" id="dDesc"></div>
         <div class="detail-tags" id="dTags"></div>
-        <button class="detail-inq-btn" onclick="showPage('inq-page')">제품 문의하기</button>
+        <button class="detail-inq-btn" onclick="showPage('inq-page')" data-ko="제품 문의하기" data-en="Inquire About This Product">제품 문의하기</button>
       </div>
     </div>
     <div class="detail-tabs">
-      <button class="tab-btn on" onclick="switchTab('info')">제품 정보</button>
-      <button class="tab-btn" onclick="switchTab('ingredient')">전성분</button>
-      <button class="tab-btn" onclick="switchTab('howto')">사용법</button>
+      <button class="tab-btn on" onclick="switchTab('info')" data-ko="제품 정보" data-en="Product Info">제품 정보</button>
+      <button class="tab-btn" onclick="switchTab('ingredient')" data-ko="전성분" data-en="Ingredients">전성분</button>
+      <button class="tab-btn" onclick="switchTab('howto')" data-ko="사용법" data-en="How to Use">사용법</button>
     </div>
     <div class="tab-content on" id="tab-info"><div class="specs-grid" id="dSpecs"></div></div>
     <div class="tab-content" id="tab-ingredient"><div class="ingredient-box"><div class="ingredient-text" id="dIngredient"></div></div></div>
@@ -429,66 +474,71 @@
   </div>
 </div>
 
-<!-- ===== INQUIRY PAGE ===== -->
+<!-- INQUIRY PAGE -->
 <div class="page" id="inq-page">
   <nav class="nav">
     <div class="logo-wrap" onclick="showPage('main-page')"><div class="logo-name">LINKO</div><div class="logo-sub">Cosmetic</div></div>
     <div class="nav-menu">
-      <a onclick="showPage('brand-page')">브랜드</a><a onclick="showPage('brand-page')">제품</a><a>공지사항</a><a onclick="showPage('inq-page')">고객센터</a><a>회사소개</a>
+      <a onclick="showPage('brand-page')" data-ko="브랜드" data-en="Brands">브랜드</a>
+      <a data-ko="공지사항" data-en="Notice">공지사항</a>
+      <a onclick="showPage('inq-page')" data-ko="문의하기" data-en="Contact">문의하기</a>
     </div>
     <div class="nav-r">
-      <div class="lw"><button class="lg on">KO</button><button class="lg">EN</button><button class="lg">VI</button></div>
-      <button class="ncta">문의하기</button>
+      <div class="lw"><button class="lg on" onclick="setLang('ko')">KO</button><button class="lg" onclick="setLang('en')">EN</button><button class="lg" onclick="setLang('vi')">VI</button></div>
+      <button class="ncta" onclick="showPage('inq-page')" data-ko="문의하기" data-en="Contact Us">문의하기</button>
     </div>
   </nav>
   <div class="inq-wrap">
     <div class="slb">Contact</div>
-    <div class="inq-title">문의하기</div>
-    <div class="inq-desc">제품 문의, 도매 거래, 입점 관련 문의를 남겨주세요.<br>빠른 시일 내에 답변 드리겠습니다.</div>
-    <div id="inq-form">
+    <div class="inq-title" data-ko="문의하기" data-en="Contact Us">문의하기</div>
+    <div class="inq-desc" data-ko="제품 문의, 도매 거래, 입점 관련 문의를 남겨주세요.&#10;빠른 시일 내에 답변 드리겠습니다." data-en="Leave your inquiry about products, wholesale, or partnerships.&#10;We will get back to you as soon as possible.">제품 문의, 도매 거래, 입점 관련 문의를 남겨주세요.<br>빠른 시일 내에 답변 드리겠습니다.</div>
+
+    <form id="inq-form" action="https://formspree.io/f/xpwzgoje" method="POST" onsubmit="handleSubmit(event)">
       <div class="form-group">
-        <div class="form-label">이름 또는 업체명 <span class="form-required">*</span></div>
-        <input type="text" class="form-input" placeholder="이름 또는 업체명을 입력해주세요" id="f-name">
+        <div class="form-label"><span data-ko="이름 또는 업체명" data-en="Name or Company">이름 또는 업체명</span> <span class="form-required">*</span></div>
+        <input type="text" name="name" class="form-input" placeholder="이름 또는 업체명을 입력해주세요" required>
       </div>
       <div class="form-group">
-        <div class="form-label">문의 유형 <span class="form-required">*</span></div>
-        <select class="form-select" id="f-type">
-          <option value="" disabled selected>문의 유형을 선택해주세요</option>
-          <option>제품 문의</option>
-          <option>도매 문의</option>
-          <option>입점 문의</option>
-          <option>기타</option>
+        <div class="form-label"><span data-ko="문의 유형" data-en="Inquiry Type">문의 유형</span> <span class="form-required">*</span></div>
+        <select name="type" class="form-select" required>
+          <option value="" disabled selected data-ko="문의 유형을 선택해주세요" data-en="Select inquiry type">문의 유형을 선택해주세요</option>
+          <option value="제품 문의" data-ko="제품 문의" data-en="Product Inquiry">제품 문의</option>
+          <option value="도매 문의" data-ko="도매 문의" data-en="Wholesale Inquiry">도매 문의</option>
+          <option value="입점 문의" data-ko="입점 문의" data-en="Partnership Inquiry">입점 문의</option>
+          <option value="기타" data-ko="기타" data-en="Other">기타</option>
         </select>
       </div>
       <div class="form-row">
         <div class="form-group">
-          <div class="form-label">연락처 <span class="form-required">*</span></div>
-          <input type="text" class="form-input" placeholder="연락처" id="f-phone">
+          <div class="form-label"><span data-ko="연락처" data-en="Phone">연락처</span> <span class="form-required">*</span></div>
+          <input type="text" name="phone" class="form-input" placeholder="연락처" required>
         </div>
         <div class="form-group">
-          <div class="form-label">이메일 <span class="form-required">*</span></div>
-          <input type="email" class="form-input" placeholder="이메일" id="f-email">
+          <div class="form-label"><span data-ko="이메일" data-en="Email">이메일</span> <span class="form-required">*</span></div>
+          <input type="email" name="email" class="form-input" placeholder="이메일" required>
         </div>
       </div>
       <div class="form-group">
-        <div class="form-label">국가 <span class="form-optional">(선택)</span></div>
-        <select class="form-select" id="f-country">
-          <option value="">국가를 선택해주세요 (선택사항)</option>
-          <option>대한민국</option><option>베트남</option><option>싱가포르</option>
-          <option>태국</option><option>필리핀</option><option>대만</option><option>기타</option>
+        <div class="form-label"><span data-ko="국가" data-en="Country">국가</span> <span class="form-optional" data-ko="(선택)" data-en="(Optional)">(선택)</span></div>
+        <select name="country" class="form-select">
+          <option value="">-</option>
+          <option>대한민국</option><option>Vietnam</option><option>Singapore</option>
+          <option>Thailand</option><option>Philippines</option><option>Taiwan</option><option>Other</option>
         </select>
       </div>
       <div class="form-group">
-        <div class="form-label">문의 내용 <span class="form-required">*</span></div>
-        <textarea class="form-textarea" placeholder="문의 내용을 자세히 입력해주세요" id="f-msg"></textarea>
+        <div class="form-label"><span data-ko="문의 내용" data-en="Message">문의 내용</span> <span class="form-required">*</span></div>
+        <textarea name="message" class="form-textarea" placeholder="문의 내용을 자세히 입력해주세요" required></textarea>
       </div>
-      <button class="form-submit" onclick="submitForm()">문의 제출하기</button>
-    </div>
+      <button type="submit" class="form-submit" data-ko="문의 제출하기" data-en="Submit Inquiry">문의 제출하기</button>
+    </form>
+
     <div class="form-success" id="form-success">
       <div class="form-success-icon">✓</div>
-      <h3>문의가 접수되었습니다</h3>
-      <p style="margin-top:8px;">빠른 시일 내에 입력하신 연락처 또는 이메일로 답변 드리겠습니다.<br>감사합니다.</p>
-      <button class="form-submit" style="margin-top:24px;max-width:200px;" onclick="showPage('main-page')">홈으로 돌아가기</button>
+      <h3 data-ko="문의가 접수되었습니다" data-en="Inquiry Submitted">문의가 접수되었습니다</h3>
+      <p data-ko="빠른 시일 내에 답변 드리겠습니다. 감사합니다." data-en="We will get back to you shortly. Thank you.">빠른 시일 내에 답변 드리겠습니다. 감사합니다.</p>
+      <button class="form-success-btn" onclick="resetForm()" data-ko="새 문의하기" data-en="New Inquiry">새 문의하기</button>
+      <button class="form-success-btn" style="background:#888;margin-left:8px;" onclick="showPage('main-page')" data-ko="홈으로" data-en="Home">홈으로</button>
     </div>
   </div>
 </div>
@@ -498,28 +548,80 @@
 <!-- FLOATING -->
 <div class="float-btn">
   <div class="float-panel" id="fpanel">
-    <div class="fp-item" onclick="window.open('http://pf.kakao.com/_WDxjdX/chat','_blank')"><div class="fp-icon">💬</div><div class="fp-label">카카오톡 문의</div></div>
-    <div class="fp-item" onclick="showPage('inq-page')"><div class="fp-icon">📋</div><div class="fp-label">문의 폼 작성</div></div>
-    <div class="fp-item"><div class="fp-icon">❓</div><div class="fp-label">자주 묻는 질문</div></div>
+    <div class="fp-item" onclick="window.open('http://pf.kakao.com/_WDxjdX/chat','_blank')"><div class="fp-icon">💬</div><div class="fp-label" data-ko="카카오톡 문의" data-en="KakaoTalk">카카오톡 문의</div></div>
+    <div class="fp-item" onclick="showPage('inq-page')"><div class="fp-icon">📋</div><div class="fp-label" data-ko="문의 폼 작성" data-en="Inquiry Form">문의 폼 작성</div></div>
+    <div class="fp-item"><div class="fp-icon">❓</div><div class="fp-label">Q&A</div></div>
   </div>
   <button class="float-main" onclick="toggleFloat()" id="fbtn">✉</button>
 </div>
 
 <script>
+// ── 데이터 ──
 const products={
-  lotion:{name:'24K Gold Collagen Lotion',sub:'스킨/로션 130ml',imgs:['images/로션.jpeg','images/로션1.jpeg','images/로션2.jpeg','images/로션3.jpeg'],desc:'24K 골드와 콜라겐이 결합된 고보습 스킨로션. 피부 속 깊은 곳까지 수분을 채워주며 탄력 있는 피부로 가꿔줍니다.',tags:['24K Gold','Collagen','High Moisturizing'],specs:[{l:'용량',v:'130ml'},{l:'제형',v:'로션'},{l:'피부타입',v:'전 피부타입'},{l:'주요성분',v:'24K Gold, Collagen'},{l:'제조국',v:'대한민국'},{l:'브랜드',v:'K.SOLEGIO'}],ingredient:'정제수, 글리세린, 나이아신아마이드, 판테놀, 부틸렌글라이콜, 1,2-헥산다이올, 베타인, 카보머, 트로메타민, 알란토인, 향료, 24K 골드, 가수분해콜라겐, 히알루론산나트륨',howto:['세안 후 스킨으로 기초 케어를 마무리합니다.','적당량(2~3펌프)을 손바닥에 덜어냅니다.','얼굴 전체에 골고루 펴 발라줍니다.','가볍게 두드려 흡수시켜 줍니다.']},
-  skin:{name:'24K Gold Collagen Skin',sub:'스킨 130ml',imgs:['images/스킨.jpeg','images/스킨1.jpeg','images/스킨2.jpeg','images/스킨3.jpeg'],desc:'24K 골드 플레이크가 함유된 프리미엄 스킨. 피부 결을 정돈하고 촉촉한 수분막을 형성하여 건강한 피부 환경을 만들어줍니다.',tags:['24K Gold Flake','Hydrating','Premium'],specs:[{l:'용량',v:'130ml'},{l:'제형',v:'스킨/토너'},{l:'피부타입',v:'전 피부타입'},{l:'주요성분',v:'24K Gold Flake, Ceramide'},{l:'제조국',v:'대한민국'},{l:'브랜드',v:'K.SOLEGIO'}],ingredient:'정제수, 부틸렌글라이콜, 글리세린, 나이아신아마이드, 1,2-헥산다이올, 판테놀, 베타인, 세라마이드NP, 히알루론산나트륨, 알란토인, 향료, 24K 골드, 가수분해콜라겐',howto:['세안 후 물기를 가볍게 닦아냅니다.','화장솜에 충분히 적셔 사용합니다.','얼굴 전체에 부드럽게 닦아내거나 펴 발라줍니다.','피부에 흡수될 때까지 가볍게 두드려줍니다.']},
-  essence:{name:'24K Gold Premium Essence',sub:'에센스 130ml',imgs:['images/에센스.jpeg','images/에센스1.jpeg','images/에센스2.jpeg','images/에센스3.jpeg'],desc:'명품 고보습 24K 에센스. 금빛 플레이크가 피부에 스며들어 탄력과 광채를 동시에 선사하는 프리미엄 기능성 에센스입니다.',tags:['Anti-aging','Brightening','Gold Flake'],specs:[{l:'용량',v:'130ml'},{l:'제형',v:'에센스'},{l:'피부타입',v:'건성·복합성'},{l:'주요성분',v:'24K Gold, Collagen Peptide'},{l:'제조국',v:'대한민국'},{l:'브랜드',v:'K.SOLEGIO'}],ingredient:'정제수, 글리세린, 부틸렌글라이콜, 나이아신아마이드, 1,2-헥산다이올, 판테놀, 베타인, 카보머, 트로메타민, 알란토인, 향료, 24K 골드, 가수분해콜라겐, 히알루론산나트륨, 세라마이드NP',howto:['스킨 케어 후 에센스 단계에서 사용합니다.','적당량(2~3방울)을 손바닥에 덜어냅니다.','얼굴 전체에 골고루 펴 발라줍니다.','피부에 완전히 흡수될 때까지 가볍게 두드려줍니다.','크림 등 후속 제품으로 마무리합니다.']},
-  suncream:{name:'Suncream Travel SPF50+',sub:'선크림 50ml · SPF50+ PA+++',imgs:['images/선크림.jpeg','images/선크림1.jpeg','images/선크림2.jpeg','images/선크림5.jpeg'],desc:'여행에 최적화된 소용량 자외선 차단제. SPF50+ PA+++의 강력한 자외선 차단력으로 일상과 야외활동 모두에서 피부를 보호합니다.',tags:['SPF50+','PA+++','Travel Size'],specs:[{l:'용량',v:'50ml'},{l:'제형',v:'크림'},{l:'피부타입',v:'전 피부타입'},{l:'SPF',v:'50+ PA+++'},{l:'제조국',v:'대한민국'},{l:'브랜드',v:'K.SOLEGIO'}],ingredient:'정제수, 호모살레이트, 에칠헥실살리실레이트, 부틸메톡시다이벤조일메테인, 옥틸트리아존, 사이클로메티콘, 글리세린, 부틸렌글라이콜, 1,2-헥산다이올, 판테놀, 알란토인, 향료',howto:['외출 15~30분 전에 사용합니다.','적당량을 손가락 한 마디 정도 덜어냅니다.','얼굴 전체에 고르게 펴 발라줍니다.','목, 귀 뒤 등 노출 부위에도 꼼꼼히 발라줍니다.','2~3시간마다 덧발라 효과를 유지합니다.']}
+  lotion:{
+    name:'24K Gold Collagen Lotion',
+    name_en:'24K Gold Collagen Lotion',
+    sub:{ko:'스킨/로션 130ml',en:'Skin/Lotion 130ml'},
+    imgs:['images/로션.jpeg','images/로션1.jpeg','images/로션2.jpeg','images/로션3.jpeg'],
+    desc:{ko:'24K 골드와 콜라겐이 결합된 고보습 스킨로션. 피부 속 깊은 곳까지 수분을 채워주며 탄력 있는 피부로 가꿔줍니다.',en:'A high-moisturizing lotion combining 24K gold and collagen. Deeply hydrates and firms your skin.'},
+    tags:['24K Gold','Collagen','High Moisturizing'],
+    specs:{ko:[{l:'용량',v:'130ml'},{l:'제형',v:'로션'},{l:'피부타입',v:'전 피부타입'},{l:'주요성분',v:'24K Gold, Collagen'},{l:'제조국',v:'대한민국'},{l:'브랜드',v:'K.SOLEGIO'}],en:[{l:'Volume',v:'130ml'},{l:'Type',v:'Lotion'},{l:'Skin Type',v:'All Skin Types'},{l:'Key Ingredients',v:'24K Gold, Collagen'},{l:'Made in',v:'Korea'},{l:'Brand',v:'K.SOLEGIO'}]},
+    ingredient:'정제수, 글리세린, 나이아신아마이드, 판테놀, 부틸렌글라이콜, 1,2-헥산다이올, 베타인, 카보머, 트로메타민, 알란토인, 향료, 24K 골드, 가수분해콜라겐, 히알루론산나트륨',
+    howto:{ko:['세안 후 스킨으로 기초 케어를 마무리합니다.','적당량(2~3펌프)을 손바닥에 덜어냅니다.','얼굴 전체에 골고루 펴 발라줍니다.','가볍게 두드려 흡수시켜 줍니다.'],en:['Complete your basic skincare routine after cleansing.','Dispense 2–3 pumps onto your palm.','Apply evenly across your face.','Pat gently until fully absorbed.']}
+  },
+  skin:{
+    name:'24K Gold Collagen Skin',
+    sub:{ko:'스킨 130ml',en:'Skin 130ml'},
+    imgs:['images/스킨.jpeg','images/스킨1.jpeg','images/스킨2.jpeg','images/스킨3.jpeg'],
+    desc:{ko:'24K 골드 플레이크가 함유된 프리미엄 스킨. 피부 결을 정돈하고 촉촉한 수분막을 형성합니다.',en:'Premium skin toner with 24K gold flakes. Refines skin texture and forms a hydrating moisture barrier.'},
+    tags:['24K Gold Flake','Hydrating','Premium'],
+    specs:{ko:[{l:'용량',v:'130ml'},{l:'제형',v:'스킨/토너'},{l:'피부타입',v:'전 피부타입'},{l:'주요성분',v:'24K Gold Flake, Ceramide'},{l:'제조국',v:'대한민국'},{l:'브랜드',v:'K.SOLEGIO'}],en:[{l:'Volume',v:'130ml'},{l:'Type',v:'Skin/Toner'},{l:'Skin Type',v:'All Skin Types'},{l:'Key Ingredients',v:'24K Gold Flake, Ceramide'},{l:'Made in',v:'Korea'},{l:'Brand',v:'K.SOLEGIO'}]},
+    ingredient:'정제수, 부틸렌글라이콜, 글리세린, 나이아신아마이드, 1,2-헥산다이올, 판테놀, 베타인, 세라마이드NP, 히알루론산나트륨, 알란토인, 향료, 24K 골드, 가수분해콜라겐',
+    howto:{ko:['세안 후 물기를 가볍게 닦아냅니다.','화장솜에 충분히 적셔 사용합니다.','얼굴 전체에 부드럽게 닦아냅니다.','피부에 흡수될 때까지 가볍게 두드려줍니다.'],en:['Pat skin dry after cleansing.','Soak a cotton pad generously.','Gently sweep across your face.','Pat until fully absorbed.']}
+  },
+  essence:{
+    name:'24K Gold Premium Essence',
+    sub:{ko:'에센스 130ml',en:'Essence 130ml'},
+    imgs:['images/에센스.jpeg','images/에센스1.jpeg','images/에센스2.jpeg','images/에센스3.jpeg'],
+    desc:{ko:'명품 고보습 24K 에센스. 금빛 플레이크가 피부에 스며들어 탄력과 광채를 선사하는 프리미엄 에센스입니다.',en:'Premium 24K gold essence. Gold flakes penetrate the skin to deliver elasticity and radiance.'},
+    tags:['Anti-aging','Brightening','Gold Flake'],
+    specs:{ko:[{l:'용량',v:'130ml'},{l:'제형',v:'에센스'},{l:'피부타입',v:'건성·복합성'},{l:'주요성분',v:'24K Gold, Collagen Peptide'},{l:'제조국',v:'대한민국'},{l:'브랜드',v:'K.SOLEGIO'}],en:[{l:'Volume',v:'130ml'},{l:'Type',v:'Essence'},{l:'Skin Type',v:'Dry, Combination'},{l:'Key Ingredients',v:'24K Gold, Collagen Peptide'},{l:'Made in',v:'Korea'},{l:'Brand',v:'K.SOLEGIO'}]},
+    ingredient:'정제수, 글리세린, 부틸렌글라이콜, 나이아신아마이드, 1,2-헥산다이올, 판테놀, 베타인, 카보머, 트로메타민, 알란토인, 향료, 24K 골드, 가수분해콜라겐, 히알루론산나트륨, 세라마이드NP',
+    howto:{ko:['스킨 케어 후 에센스 단계에서 사용합니다.','적당량(2~3방울)을 손바닥에 덜어냅니다.','얼굴 전체에 골고루 펴 발라줍니다.','피부에 완전히 흡수될 때까지 두드려줍니다.','크림 등 후속 제품으로 마무리합니다.'],en:['Use at the essence step of your skincare routine.','Dispense 2–3 drops onto your palm.','Apply evenly across your face.','Pat gently until fully absorbed.','Follow up with moisturizer or cream.']}
+  },
+  suncream:{
+    name:'Suncream Travel SPF50+',
+    sub:{ko:'선크림 50ml · SPF50+ PA+++',en:'Suncream 50ml · SPF50+ PA+++'},
+    imgs:['images/선크림.jpeg','images/선크림1.jpeg','images/선크림2.jpeg','images/선크림5.jpeg'],
+    desc:{ko:'여행에 최적화된 소용량 자외선 차단제. SPF50+ PA+++의 강력한 자외선 차단력으로 피부를 보호합니다.',en:'Travel-sized sunscreen optimized for on-the-go use. SPF50+ PA+++ provides powerful UV protection.'},
+    tags:['SPF50+','PA+++','Travel Size'],
+    specs:{ko:[{l:'용량',v:'50ml'},{l:'제형',v:'크림'},{l:'피부타입',v:'전 피부타입'},{l:'SPF',v:'50+ PA+++'},{l:'제조국',v:'대한민국'},{l:'브랜드',v:'K.SOLEGIO'}],en:[{l:'Volume',v:'50ml'},{l:'Type',v:'Cream'},{l:'Skin Type',v:'All Skin Types'},{l:'SPF',v:'50+ PA+++'},{l:'Made in',v:'Korea'},{l:'Brand',v:'K.SOLEGIO'}]},
+    ingredient:'정제수, 호모살레이트, 에칠헥실살리실레이트, 부틸메톡시다이벤조일메테인, 옥틸트리아존, 사이클로메티콘, 글리세린, 부틸렌글라이콜, 1,2-헥산다이올, 판테놀, 알란토인, 향료',
+    howto:{ko:['외출 15~30분 전에 사용합니다.','적당량을 손가락 한 마디 정도 덜어냅니다.','얼굴 전체에 고르게 펴 발라줍니다.','목, 귀 뒤 등 노출 부위에도 발라줍니다.','2~3시간마다 덧발라 효과를 유지합니다.'],en:['Apply 15–30 minutes before sun exposure.','Dispense about a fingertip amount.','Apply evenly over your face.','Cover exposed areas like neck and ears.','Reapply every 2–3 hours for continued protection.']}
+  }
 };
 
-let cur=0,total=4,tm,floatOpen=false,curProduct=null,prevPage='main-page';
+// ── 언어 ──
+let lang='ko';
+function setLang(l){
+  lang=l;
+  document.querySelectorAll('.lg').forEach(b=>{b.classList.toggle('on',b.textContent===l.toUpperCase());});
+  document.querySelectorAll('[data-ko]').forEach(el=>{
+    const val=l==='en'?el.getAttribute('data-en'):el.getAttribute('data-ko');
+    if(val) el.textContent=val;
+  });
+}
 
+// ── 페이지 전환 ──
+let cur=0,total=4,tm,floatOpen=false,curProduct=null,prevPage='main-page';
 function showPage(id){
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
   document.getElementById(id).classList.add('active');
   document.getElementById(id).scrollTop=0;
+  if(floatOpen)toggleFloat();
 }
+
+// ── 캐러셀 ──
 function goTo(n){
   document.querySelectorAll('.sl')[cur].classList.remove('on');
   document.querySelectorAll('.dot')[cur].classList.remove('on');
@@ -536,23 +638,28 @@ document.getElementById('car').addEventListener('mouseenter',()=>clearInterval(t
 document.getElementById('car').addEventListener('mouseleave',()=>ap());
 ap();
 
+// ── 플로팅 ──
 function toggleFloat(){
   floatOpen=!floatOpen;
   document.getElementById('fpanel').classList.toggle('show',floatOpen);
   document.getElementById('fbtn').textContent=floatOpen?'✕':'✉';
 }
+
+// ── 제품 상세 ──
 function openDetail(key){
   const p=products[key]; curProduct=key;
   prevPage=document.querySelector('.page.active').id;
   document.getElementById('dName').textContent=p.name;
-  document.getElementById('dSub').textContent=p.sub;
-  document.getElementById('dDesc').textContent=p.desc;
+  document.getElementById('dSub').textContent=p.sub[lang]||p.sub.ko;
+  document.getElementById('dDesc').textContent=p.desc[lang]||p.desc.ko;
   document.getElementById('mainImg').style.backgroundImage=`url('${p.imgs[0]}')`;
   document.getElementById('dTags').innerHTML=p.tags.map(t=>`<span class="tag">${t}</span>`).join('');
   document.getElementById('thumbs').innerHTML=p.imgs.map((img,i)=>`<div class="thumb ${i===0?'on':''}" onclick="setThumb(${i})"><div class="thumb-img" style="background-image:url('${img}')"></div></div>`).join('');
-  document.getElementById('dSpecs').innerHTML=p.specs.map(s=>`<div class="spec-item"><div class="spec-label">${s.l}</div><div class="spec-val">${s.v}</div></div>`).join('');
+  const specs=p.specs[lang]||p.specs.ko;
+  document.getElementById('dSpecs').innerHTML=specs.map(s=>`<div class="spec-item"><div class="spec-label">${s.l}</div><div class="spec-val">${s.v}</div></div>`).join('');
   document.getElementById('dIngredient').textContent=p.ingredient;
-  document.getElementById('dHowto').innerHTML=p.howto.map((s,i)=>`<div class="step"><div class="step-num">${i+1}</div><div class="step-txt">${s}</div></div>`).join('');
+  const howto=p.howto[lang]||p.howto.ko;
+  document.getElementById('dHowto').innerHTML=howto.map((s,i)=>`<div class="step"><div class="step-num">${i+1}</div><div class="step-txt">${s}</div></div>`).join('');
   switchTab('info');
   showPage('detail-page');
 }
@@ -567,12 +674,27 @@ function switchTab(name){
   document.getElementById(`tab-${name}`).classList.add('on');
 }
 function closeDetail(){showPage(prevPage);}
+
+// ── 브랜드 페이지 ──
 function selectBrand(key,el){
   document.querySelectorAll('.brand-item').forEach(i=>i.classList.remove('on'));
   el.classList.add('on');
   const content=document.getElementById('brand-content');
   if(key==='ksolegio'){
-    content.innerHTML=`<div class="brand-header"><div class="brand-header-name">K.Solegio</div><div class="brand-header-desc">24K 골드 콜라겐 — 고보습 프리미엄 스킨케어 라인</div></div><div class="cat-tabs"><div class="cat-tab on" onclick="filterCat('all',this)">전체</div><div class="cat-tab" onclick="filterCat('skincare',this)">스킨케어</div><div class="cat-tab" onclick="filterCat('essence',this)">에센스</div><div class="cat-tab" onclick="filterCat('suncare',this)">선케어</div></div><div class="brand-grid" id="brand-grid"><div class="pc" data-cat="skincare" onclick="openDetail('lotion')"><div class="pt"><div class="pi" style="background-image:url('images/로션.jpeg')"></div><div class="pch">LOTION</div></div><div class="pb"><div class="pn">24K Gold Collagen Lotion</div><div class="pty">스킨/로션 130ml</div></div></div><div class="pc" data-cat="skincare" onclick="openDetail('skin')"><div class="pt"><div class="pi" style="background-image:url('images/스킨.jpeg')"></div><div class="pch">SKIN</div></div><div class="pb"><div class="pn">24K Gold Collagen Skin</div><div class="pty">스킨 130ml</div></div></div><div class="pc" data-cat="essence" onclick="openDetail('essence')"><div class="pt"><div class="pi" style="background-image:url('images/에센스.jpeg')"></div><div class="pch">ESSENCE</div></div><div class="pb"><div class="pn">24K Gold Premium Essence</div><div class="pty">에센스 130ml</div></div></div><div class="pc" data-cat="suncare" onclick="openDetail('suncream')"><div class="pt"><div class="pi" style="background-image:url('images/선크림.jpeg')"></div><div class="pch">SUNCREAM</div></div><div class="pb"><div class="pn">Suncream Travel SPF50+</div><div class="pty">선크림 50ml</div></div></div></div>`;
+    content.innerHTML=`
+      <div class="brand-header"><div class="brand-header-name">K.Solegio</div><div class="brand-header-desc">24K 골드 콜라겐 — 고보습 프리미엄 스킨케어 라인</div></div>
+      <div class="cat-tabs">
+        <div class="cat-tab on" onclick="filterCat('all',this)">전체</div>
+        <div class="cat-tab" onclick="filterCat('skincare',this)">스킨케어</div>
+        <div class="cat-tab" onclick="filterCat('essence',this)">에센스</div>
+        <div class="cat-tab" onclick="filterCat('suncare',this)">선케어</div>
+      </div>
+      <div class="brand-grid" id="brand-grid">
+        <div class="pc" data-cat="skincare" onclick="openDetail('lotion')"><div class="pt"><div class="pi" style="background-image:url('images/로션.jpeg')"></div><div class="pch">LOTION</div></div><div class="pb"><div class="pn">24K Gold Collagen Lotion</div><div class="pty">스킨/로션 130ml</div></div></div>
+        <div class="pc" data-cat="skincare" onclick="openDetail('skin')"><div class="pt"><div class="pi" style="background-image:url('images/스킨.jpeg')"></div><div class="pch">SKIN</div></div><div class="pb"><div class="pn">24K Gold Collagen Skin</div><div class="pty">스킨 130ml</div></div></div>
+        <div class="pc" data-cat="essence" onclick="openDetail('essence')"><div class="pt"><div class="pi" style="background-image:url('images/에센스.jpeg')"></div><div class="pch">ESSENCE</div></div><div class="pb"><div class="pn">24K Gold Premium Essence</div><div class="pty">에센스 130ml</div></div></div>
+        <div class="pc" data-cat="suncare" onclick="openDetail('suncream')"><div class="pt"><div class="pi" style="background-image:url('images/선크림.jpeg')"></div><div class="pch">SUNCREAM</div></div><div class="pb"><div class="pn">Suncream Travel SPF50+</div><div class="pty">선크림 50ml</div></div></div>
+      </div>`;
   } else {
     const num=key.replace('brand','');
     content.innerHTML=`<div class="coming-brand-msg"><div class="cr" style="width:64px;height:64px;border-radius:50%;border:1px solid var(--goldl);display:flex;align-items:center;justify-content:center;"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="11" stroke="#C9A96E" stroke-width="1.2"/><path d="M14 8v6l3 3" stroke="#C9A96E" stroke-width="1.2" stroke-linecap="round"/></svg></div><h3>Brand #${num}</h3><p>현재 입점 진행 중인 브랜드입니다.<br>곧 멋진 제품들로 찾아올게요.</p></div>`;
@@ -583,12 +705,29 @@ function filterCat(cat,el){
   el.classList.add('on');
   document.querySelectorAll('#brand-grid .pc').forEach(c=>{c.style.display=(cat==='all'||c.dataset.cat===cat)?'block':'none';});
 }
-function submitForm(){
-  if(!document.getElementById('f-name').value||!document.getElementById('f-type').value||!document.getElementById('f-phone').value||!document.getElementById('f-email').value||!document.getElementById('f-msg').value){
-    alert('필수 항목을 모두 입력해주세요.');return;
-  }
-  document.getElementById('inq-form').style.display='none';
-  document.getElementById('form-success').style.display='block';
+
+// ── 문의 폼 ──
+function handleSubmit(e){
+  e.preventDefault();
+  const form=document.getElementById('inq-form');
+  const data=new FormData(form);
+  fetch(form.action,{method:'POST',body:data,headers:{'Accept':'application/json'}})
+    .then(r=>{
+      if(r.ok){
+        form.style.display='none';
+        document.getElementById('form-success').style.display='block';
+      } else {
+        alert('제출 중 오류가 발생했습니다. 다시 시도해주세요.');
+      }
+    })
+    .catch(()=>alert('네트워크 오류가 발생했습니다. 다시 시도해주세요.'));
+}
+
+function resetForm(){
+  const form=document.getElementById('inq-form');
+  form.reset();
+  form.style.display='block';
+  document.getElementById('form-success').style.display='none';
 }
 </script>
 </body>
