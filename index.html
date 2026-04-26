@@ -9,8 +9,8 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 :root{--cream:#FAF8F5;--dark:#111010;--gold:#C9A96E;--goldl:#E8D5B0;--goldp:#F5EDD8;--mid:#888580;--bd:rgba(0,0,0,0.07);}
-#app{position:relative;width:100%;height:100vh;overflow:hidden;font-family:'Noto Sans KR',sans-serif;}
-.page{position:absolute;inset:0;overflow-y:auto;background:var(--cream);transition:transform .45s cubic-bezier(.77,0,.18,1);transform:translateX(100%);}
+#app{position:relative;width:100%;font-family:'Noto Sans KR',sans-serif;}
+.page{position:fixed;inset:0;overflow-y:auto;background:var(--cream);transition:transform .45s cubic-bezier(.77,0,.18,1);transform:translateX(100%);-webkit-overflow-scrolling:touch;}
 .page.active{transform:translateX(0);}
 #main-page{transform:translateX(0);}
 
@@ -153,11 +153,11 @@
 .detail-body{max-width:1100px;margin:0 auto;padding:48px;}
 .detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;margin-bottom:64px;}
 .gallery-main{aspect-ratio:1;border-radius:16px;overflow:hidden;background:#f0ede8;margin-bottom:12px;}
-.gallery-main-img{width:100%;height:100%;background-size:cover;background-position:center;}
+.gallery-main-img{width:100%;height:100%;background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#f8f6f0;}
 .gallery-thumbs{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;}
 .thumb{aspect-ratio:1;border-radius:8px;overflow:hidden;cursor:pointer;border:2px solid transparent;transition:all .2s;}
 .thumb.on{border-color:var(--gold);}
-.thumb-img{width:100%;height:100%;background-size:cover;background-position:center;}
+.thumb-img{width:100%;height:100%;background-size:cover;background-position:center top;}
 .detail-brand{font-size:11px;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;}
 .detail-name{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:600;line-height:1.15;margin-bottom:8px;letter-spacing:-.3px;}
 .detail-sub{font-size:13px;color:var(--mid);font-weight:300;margin-bottom:24px;}
@@ -213,7 +213,14 @@
   .nav{padding:0 20px;height:56px;}
   .nav-menu{display:none;}
   .logo-name{font-size:18px;}
-  .car{height:380px;}
+  .car{height:300px;}
+  .bar{padding:14px 16px;}
+  .bb{font-size:9px;letter-spacing:1.5px;}
+  .bp{font-size:13px;}
+  .bsep{display:none;}
+  .bbtn{padding:6px 14px;font-size:10px;}
+  .cpv,.cnx{width:30px;height:30px;font-size:12px;}
+
   .bar{padding:16px 20px;}
   .bp{font-size:15px;}
   .bbtn{padding:7px 16px;font-size:11px;}
@@ -610,7 +617,7 @@ const products={
     desc:{ko:'24K 골드와 콜라겐이 결합된 고보습 스킨로션. 피부 속 깊은 곳까지 수분을 채워주며 탄력 있는 피부로 가꿔줍니다.',en:'A high-moisturizing lotion combining 24K gold and collagen. Deeply hydrates and firms your skin.'},
     tags:['24K Gold','Collagen','High Moisturizing'],
     specs:{ko:[{l:'용량',v:'130ml'},{l:'제형',v:'로션'},{l:'피부타입',v:'전 피부타입'},{l:'주요성분',v:'24K Gold, Collagen'},{l:'제조국',v:'대한민국'},{l:'브랜드',v:'K.SOLEGIO'}],en:[{l:'Volume',v:'130ml'},{l:'Type',v:'Lotion'},{l:'Skin Type',v:'All Skin Types'},{l:'Key Ingredients',v:'24K Gold, Collagen'},{l:'Made in',v:'Korea'},{l:'Brand',v:'K.SOLEGIO'}]},
-    ingredient:'정제수, 글리세린, 나이아신아마이드, 판테놀, 부틸렌글라이콜, 1,2-헥산다이올, 베타인, 카보머, 트로메타민, 알란토인, 향료, 24K 골드, 가수분해콜라겐, 히알루론산나트륨',
+    ingredient:'정제수, 프로판다이올, 다이프로필렌글라이콜, 베헤닐알코올, 세틸알코올, 사이클로펜타실록세인, 사이클로헥사실록세인, 부틸렌글라이콜, 글리세린, 콜라겐(50,000ppm), 호호바씨오일, 1,2-헥산다이올, 스쿠알란, 베타-글루칸, 에틸헥실글리세린, 다이소듐이디티에이, 카보머, 트라이에탄올아민, 하이알루로닉애씨드, 소듐하이알루로닉애씨드, 소듐하이알루로네이트, 자일리툴, 세라마이드엔피, 카프릴릴글라이콜, 24K 골드',
     howto:{ko:['세안 후 스킨으로 기초 케어를 마무리합니다.','적당량(2~3펌프)을 손바닥에 덜어냅니다.','얼굴 전체에 골고루 펴 발라줍니다.','가볍게 두드려 흡수시켜 줍니다.'],en:['Complete your basic skincare routine after cleansing.','Dispense 2–3 pumps onto your palm.','Apply evenly across your face.','Pat gently until fully absorbed.']}
   },
   skin:{
@@ -620,7 +627,7 @@ const products={
     desc:{ko:'24K 골드 플레이크가 함유된 프리미엄 스킨. 피부 결을 정돈하고 촉촉한 수분막을 형성합니다.',en:'Premium skin toner with 24K gold flakes. Refines skin texture and forms a hydrating moisture barrier.'},
     tags:['24K Gold Flake','Hydrating','Premium'],
     specs:{ko:[{l:'용량',v:'130ml'},{l:'제형',v:'스킨/토너'},{l:'피부타입',v:'전 피부타입'},{l:'주요성분',v:'24K Gold Flake, Ceramide'},{l:'제조국',v:'대한민국'},{l:'브랜드',v:'K.SOLEGIO'}],en:[{l:'Volume',v:'130ml'},{l:'Type',v:'Skin/Toner'},{l:'Skin Type',v:'All Skin Types'},{l:'Key Ingredients',v:'24K Gold Flake, Ceramide'},{l:'Made in',v:'Korea'},{l:'Brand',v:'K.SOLEGIO'}]},
-    ingredient:'정제수, 부틸렌글라이콜, 글리세린, 나이아신아마이드, 1,2-헥산다이올, 판테놀, 베타인, 세라마이드NP, 히알루론산나트륨, 알란토인, 향료, 24K 골드, 가수분해콜라겐',
+    ingredient:'정제수, 다이프로필렌글라이콜, 부틸렌글라이콜, 글리세린, 콜라겐(50,000ppm), 호호바씨오일, 1,2-헥산다이올, 스쿠알란, 에틸헥실글리세린, 프로판다이올, 다이소듐이디티에이, 카보머, 크라이에탄올아민, 하이알루로닉애씨드, 소듐하이알루로네이트, 세라마이드엔피, 카프릴릴글라이콜, 24K 골드',
     howto:{ko:['세안 후 물기를 가볍게 닦아냅니다.','화장솜에 충분히 적셔 사용합니다.','얼굴 전체에 부드럽게 닦아냅니다.','피부에 흡수될 때까지 가볍게 두드려줍니다.'],en:['Pat skin dry after cleansing.','Soak a cotton pad generously.','Gently sweep across your face.','Pat until fully absorbed.']}
   },
   essence:{
@@ -630,7 +637,7 @@ const products={
     desc:{ko:'명품 고보습 24K 에센스. 금빛 플레이크가 피부에 스며들어 탄력과 광채를 선사하는 프리미엄 에센스입니다.',en:'Premium 24K gold essence. Gold flakes penetrate the skin to deliver elasticity and radiance.'},
     tags:['Anti-aging','Brightening','Gold Flake'],
     specs:{ko:[{l:'용량',v:'130ml'},{l:'제형',v:'에센스'},{l:'피부타입',v:'건성·복합성'},{l:'주요성분',v:'24K Gold, Collagen Peptide'},{l:'제조국',v:'대한민국'},{l:'브랜드',v:'K.SOLEGIO'}],en:[{l:'Volume',v:'130ml'},{l:'Type',v:'Essence'},{l:'Skin Type',v:'Dry, Combination'},{l:'Key Ingredients',v:'24K Gold, Collagen Peptide'},{l:'Made in',v:'Korea'},{l:'Brand',v:'K.SOLEGIO'}]},
-    ingredient:'정제수, 글리세린, 부틸렌글라이콜, 나이아신아마이드, 1,2-헥산다이올, 판테놀, 베타인, 카보머, 트로메타민, 알란토인, 향료, 24K 골드, 가수분해콜라겐, 히알루론산나트륨, 세라마이드NP',
+    ingredient:'정제수, 글리세린, 다이프로필렌글라이콜, 베타인, 글리세릴폴리아크릴레이트, 피이지-60하이드로제네이티드캐스터오일, 페녹시에탄올, 알란토인, 달팽이점액여과물, 알로에베라잎추출물, 하이드롤라이즈드콜라겐, 트라이에탄올아민, 카보머, 뽕나무껍질추출물, 녹차추출물, 하이드록시에틸셀룰로스, 동충하초추출물, 다이포타슘글리시리제이트, 소듐하이알루로네이트, 하이알루로닉애씨드, 하이드롤라이즈드키틴, 홍삼추출물, 향료, 1,2-헥산다이올, 아데노신, 다이소듐디티에이, 24K 골드',
     howto:{ko:['스킨 케어 후 에센스 단계에서 사용합니다.','적당량(2~3방울)을 손바닥에 덜어냅니다.','얼굴 전체에 골고루 펴 발라줍니다.','피부에 완전히 흡수될 때까지 두드려줍니다.','크림 등 후속 제품으로 마무리합니다.'],en:['Use at the essence step of your skincare routine.','Dispense 2–3 drops onto your palm.','Apply evenly across your face.','Pat gently until fully absorbed.','Follow up with moisturizer or cream.']}
   },
   suncream:{
