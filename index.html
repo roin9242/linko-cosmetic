@@ -377,43 +377,68 @@ html,body{margin:0;padding:0;}
       <div class="slb" data-ko="글로벌 판매 채널" data-en="Global Sales Channel">글로벌 판매 채널</div>
       <div class="stl" data-ko="Shopee에서 만나보세요" data-en="Find Us on Shopee">Shopee에서 만나보세요</div>
       <div class="sgd">
-        <div class="si"><img class="flag-img" src="https://flagcdn.com/w40/sg.png" alt="Singapore"><div class="sc">Singapore</div><div class="shopee-logo">Shopee</div></div>
-        <div class="si"><img class="flag-img" src="https://flagcdn.com/w40/vn.png" alt="Vietnam"><div class="sc">Vietnam</div><div class="shopee-logo">Shopee</div></div>
-        <div class="si"><img class="flag-img" src="https://flagcdn.com/w40/tw.png" alt="Taiwan"><div class="sc">Taiwan</div><div class="shopee-logo">Shopee</div></div>
-        <div class="si"><img class="flag-img" src="https://flagcdn.com/w40/th.png" alt="Thailand"><div class="sc">Thailand</div><div class="shopee-logo">Shopee</div></div>
-        <div class="si"><img class="flag-img" src="https://flagcdn.com/w40/ph.png" alt="Philippines"><div class="sc">Philippines</div><div class="shopee-logo">Shopee</div></div>
+        <div class="si" onclick="window.open('https://shopee.sg/lin_ko.sg','_blank')" style="cursor:pointer"><img class="flag-img" src="https://flagcdn.com/w40/sg.png" alt="Singapore"><div class="sc">Singapore</div><div class="shopee-logo">Shopee ↗</div></div>
+        <div class="si" onclick="window.open('https://shopee.vn/lin_komz.vn','_blank')" style="cursor:pointer"><img class="flag-img" src="https://flagcdn.com/w40/vn.png" alt="Vietnam"><div class="sc">Vietnam</div><div class="shopee-logo">Shopee ↗</div></div>
+        <div class="si" onclick="window.open('https://shopee.tw/lin_kobz','_blank')" style="cursor:pointer"><img class="flag-img" src="https://flagcdn.com/w40/tw.png" alt="Taiwan"><div class="sc">Taiwan</div><div class="shopee-logo">Shopee ↗</div></div>
+        <div class="si" onclick="window.open('https://shopee.co.th/lin_koju.th','_blank')" style="cursor:pointer"><img class="flag-img" src="https://flagcdn.com/w40/th.png" alt="Thailand"><div class="sc">Thailand</div><div class="shopee-logo">Shopee ↗</div></div>
+        <div class="si" onclick="window.open('https://shopee.ph/lin_konq.ph','_blank')" style="cursor:pointer"><img class="flag-img" src="https://flagcdn.com/w40/ph.png" alt="Philippines"><div class="sc">Philippines</div><div class="shopee-logo">Shopee ↗</div></div>
       </div>
     </div>
 
     <div class="btm">
+      <!-- 공지사항 -->
       <div class="cw">
         <div class="ct" data-ko="공지사항" data-en="Notice">공지사항</div>
         <div class="nr"><div class="nn">01</div><div><div class="nt" data-ko="K.Solegio 신제품 출시 안내" data-en="K.Solegio New Product Launch">K.Solegio 신제품 출시 안내</div><div class="nd">2025.04.20</div></div></div>
         <div class="nr"><div class="nn">02</div><div><div class="nt" data-ko="베트남어 지원 업데이트 예정" data-en="Vietnamese Language Support Coming Soon">베트남어 지원 업데이트 예정</div><div class="nd">2025.04.15</div></div></div>
         <div class="nr"><div class="nn">03</div><div><div class="nt" data-ko="LINKO Cosmetic 플랫폼 오픈" data-en="LINKO Cosmetic Platform Launch">LINKO Cosmetic 플랫폼 오픈</div><div class="nd">2025.04.01</div></div></div>
       </div>
-      <div class="cw">
-        <div class="ct" data-ko="고객센터" data-en="Customer Service">고객센터</div>
-        <div class="csg">
-          <div class="csi" onclick="window.open('http://pf.kakao.com/_WDxjdX/chat','_blank')">
-            <div class="cic">💬</div>
-            <div class="cnm">KakaoTalk</div>
-            <div class="cdc" data-ko="채널 바로가기" data-en="Chat with us">채널 바로가기</div>
+      <!-- 고객센터 + SNS -->
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <!-- 고객센터 -->
+        <div class="cw">
+          <div class="ct" data-ko="고객센터" data-en="Customer Service">고객센터</div>
+          <div class="csg">
+            <div class="csi" onclick="window.open('http://pf.kakao.com/_WDxjdX/chat','_blank')">
+              <div class="cic">💬</div>
+              <div class="cnm">KakaoTalk</div>
+              <div class="cdc" data-ko="채널 바로가기" data-en="Chat with us">채널 바로가기</div>
+            </div>
+            <div class="csi" onclick="showPage('inq-page')">
+              <div class="cic">📋</div>
+              <div class="cnm" data-ko="문의하기" data-en="Inquiry">문의하기</div>
+              <div class="cdc" data-ko="제품 및 도매 문의" data-en="Product & Wholesale">제품 및 도매 문의</div>
+            </div>
+            <div class="csi">
+              <div class="cic">❓</div>
+              <div class="cnm">Q&A</div>
+              <div class="cdc" data-ko="자주 묻는 질문" data-en="FAQ">자주 묻는 질문</div>
+            </div>
           </div>
-          <div class="csi" onclick="showPage('inq-page')">
-            <div class="cic">📋</div>
-            <div class="cnm" data-ko="문의하기" data-en="Inquiry">문의하기</div>
-            <div class="cdc" data-ko="제품 및 도매 문의" data-en="Product & Wholesale">제품 및 도매 문의</div>
-          </div>
-          <div class="csi">
-            <div class="cic">❓</div>
-            <div class="cnm">Q&A</div>
-            <div class="cdc" data-ko="자주 묻는 질문" data-en="FAQ">자주 묻는 질문</div>
+        </div>
+        <!-- SNS 채널 -->
+        <div class="cw">
+          <div class="ct" data-ko="SNS 채널" data-en="Follow Us">SNS 채널</div>
+          <div class="csg">
+            <div class="csi" onclick="window.open('https://www.facebook.com/Linko.Cosmetic','_blank')">
+              <div class="cic"><svg width="20" height="20" viewBox="0 0 24 24" fill="#1877F2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></div>
+              <div class="cnm">Facebook</div>
+              <div class="cdc">Linko.Cosmetic</div>
+            </div>
+            <div class="csi" onclick="window.open('https://www.instagram.com/linko.cosmetic','_blank')">
+              <div class="cic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E1306C" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="#E1306C" stroke="none"/></svg></div>
+              <div class="cnm">Instagram</div>
+              <div class="cdc">linko.cosmetic</div>
+            </div>
+            <div class="csi" onclick="window.open('https://www.tiktok.com/@linko.cosmatic','_blank')">
+              <div class="cic"><svg width="20" height="20" viewBox="0 0 24 24" fill="#010101"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.74a4.85 4.85 0 01-1.01-.05z"/></svg></div>
+              <div class="cnm">TikTok</div>
+              <div class="cdc">linko.cosmatic</div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
+    </div>  </div>
 
   <div class="ft">
     <div class="ftt">
