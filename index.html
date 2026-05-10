@@ -63,6 +63,8 @@ html,body{margin:0;padding:0;}
 .bn{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:500;}
 .bab{margin-left:auto;font-size:10px;font-weight:500;padding:4px 12px;border-radius:12px;background:#F0FDF4;color:#16A34A;}
 .pg{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+.pnew{position:absolute;top:10px;right:10px;font-size:9px;font-weight:700;padding:3px 8px;border-radius:8px;background:var(--gold);color:white;letter-spacing:.5px;text-transform:uppercase;}
+.pc-new{border-color:rgba(201,169,110,.25);}
 .pc{background:var(--cream);border:0.5px solid var(--bd);border-radius:14px;overflow:hidden;cursor:pointer;transition:all .25s;}
 .pc:hover{transform:translateY(-5px);border-color:var(--goldl);box-shadow:0 16px 40px rgba(0,0,0,.06);}
 .pt{aspect-ratio:1;position:relative;background:#f0ede8;}
@@ -287,11 +289,35 @@ html,body{margin:0;padding:0;}
   <div class="car" id="car">
     <div class="sls" id="sls">
       <div class="sl on">
+        <div class="bg" style="background-image:url('images/essence1.jpeg')"></div>
+        <div class="ov"></div>
+        <div class="bar">
+          <div class="bl"><span class="bb">K.SOLEGIO · NEW</span><div class="bsep"></div><span class="bp">에센스 4종 신규 입점</span></div>
+          <button class="bbtn" onclick="showPage('brand-page')" data-ko="전체 보기" data-en="View All" data-vi="Xem tất cả">전체 보기</button>
+        </div>
+      </div>
+      <div class="sl">
+        <div class="bg" style="background-image:url('images/essence2.jpeg')"></div>
+        <div class="ov"></div>
+        <div class="bar">
+          <div class="bl"><span class="bb">K.SOLEGIO</span><div class="bsep"></div><span class="bp">Hyaluronic · Collagen Essence</span></div>
+          <button class="bbtn" onclick="openDetail('essence_hyaluronic')" data-ko="제품 보기" data-en="View Product" data-vi="Xem sản phẩm">제품 보기</button>
+        </div>
+      </div>
+      <div class="sl">
+        <div class="bg" style="background-image:url('images/essence3.jpeg')"></div>
+        <div class="ov"></div>
+        <div class="bar">
+          <div class="bl"><span class="bb">K.SOLEGIO</span><div class="bsep"></div><span class="bp">Retinol · Cica Calming Essence</span></div>
+          <button class="bbtn" onclick="openDetail('essence_retinol')" data-ko="제품 보기" data-en="View Product" data-vi="Xem sản phẩm">제품 보기</button>
+        </div>
+      </div>
+      <div class="sl">
         <div class="bg" style="background-image:url('images/lotion1.jpeg')"></div>
         <div class="ov"></div>
         <div class="bar">
           <div class="bl"><span class="bb">K.SOLEGIO</span><div class="bsep"></div><span class="bp">24K Gold Collagen Lotion</span></div>
-          <button class="bbtn" onclick="openDetail('lotion')" data-ko="제품 보기" data-en="View Product" data-vi="Xem sản phẩm" data-vi="Xem sản phẩm">제품 보기</button>
+          <button class="bbtn" onclick="openDetail('lotion')" data-ko="제품 보기" data-en="View Product" data-vi="Xem sản phẩm">제품 보기</button>
         </div>
       </div>
       <div class="sl">
@@ -299,23 +325,15 @@ html,body{margin:0;padding:0;}
         <div class="ov"></div>
         <div class="bar">
           <div class="bl"><span class="bb">K.SOLEGIO</span><div class="bsep"></div><span class="bp">24K Gold Collagen Skin</span></div>
-          <button class="bbtn" onclick="openDetail('skin')" data-ko="제품 보기" data-en="View Product" data-vi="Xem sản phẩm" data-vi="Xem sản phẩm">제품 보기</button>
+          <button class="bbtn" onclick="openDetail('skin')" data-ko="제품 보기" data-en="View Product" data-vi="Xem sản phẩm">제품 보기</button>
         </div>
       </div>
       <div class="sl">
         <div class="bg" style="background-image:url('images/skin3.jpeg')"></div>
         <div class="ov"></div>
         <div class="bar">
-          <div class="bl"><span class="bb">K.SOLEGIO</span><div class="bsep"></div><span class="bp">Gold Flake Essence</span></div>
-          <button class="bbtn" onclick="openDetail('essence')" data-ko="제품 보기" data-en="View Product" data-vi="Xem sản phẩm" data-vi="Xem sản phẩm">제품 보기</button>
-        </div>
-      </div>
-      <div class="sl">
-        <div class="bg" style="background-image:url('images/suncream2.jpeg')"></div>
-        <div class="ov"></div>
-        <div class="bar">
-          <div class="bl"><span class="bb">K.SOLEGIO</span><div class="bsep"></div><span class="bp">Suncream Travel SPF50+</span></div>
-          <button class="bbtn" onclick="openDetail('suncream')" data-ko="제품 보기" data-en="View Product" data-vi="Xem sản phẩm" data-vi="Xem sản phẩm">제품 보기</button>
+          <div class="bl"><span class="bb">K.SOLEGIO</span><div class="bsep"></div><span class="bp">24K Gold Premium Essence</span></div>
+          <button class="bbtn" onclick="openDetail('essence')" data-ko="제품 보기" data-en="View Product" data-vi="Xem sản phẩm">제품 보기</button>
         </div>
       </div>
     </div>
@@ -326,6 +344,8 @@ html,body{margin:0;padding:0;}
       <div class="dot" onclick="goTo(1)"></div>
       <div class="dot" onclick="goTo(2)"></div>
       <div class="dot" onclick="goTo(3)"></div>
+      <div class="dot" onclick="goTo(4)"></div>
+      <div class="dot" onclick="goTo(5)"></div>
     </div>
     <div class="prg" id="prg"></div>
   </div>
@@ -344,6 +364,22 @@ html,body{margin:0;padding:0;}
         <div class="bab" data-ko="● 입점 완료" data-en="● Active" data-vi="● Hoạt động" data-vi="● Đã vào">● 입점 완료</div>
       </div>
       <div class="pg">
+        <div class="pc pc-new" onclick="openDetail('essence_hyaluronic')">
+          <div class="pt"><div class="pi" style="background-image:url('images/essence_hyaluronic.png');background-size:contain;background-color:#eef4fb;"></div><div class="pch">ESSENCE</div><div class="pnew" data-ko="신상품" data-en="NEW" data-vi="MỚI">신상품</div></div>
+          <div class="pb"><div class="pn">Hyaluronic Essence</div><div class="pty" data-ko="히알루론산 에센스 50ml" data-en="Hyaluronic Essence 50ml" data-vi="Essence Hyaluronic 50ml">히알루론산 에센스 50ml</div></div>
+        </div>
+        <div class="pc pc-new" onclick="openDetail('essence_collagen')">
+          <div class="pt"><div class="pi" style="background-image:url('images/essence_group1.png');background-size:contain;background-color:#eef6ef;"></div><div class="pch">ESSENCE</div><div class="pnew" data-ko="신상품" data-en="NEW" data-vi="MỚI">신상품</div></div>
+          <div class="pb"><div class="pn">Collagen Essence</div><div class="pty" data-ko="콜라겐 에센스 50ml" data-en="Collagen Essence 50ml" data-vi="Essence Collagen 50ml">콜라겐 에센스 50ml</div></div>
+        </div>
+        <div class="pc pc-new" onclick="openDetail('essence_retinol')">
+          <div class="pt"><div class="pi" style="background-image:url('images/essence_retinol.png');background-size:contain;background-color:#faf2eb;"></div><div class="pch">ESSENCE</div><div class="pnew" data-ko="신상품" data-en="NEW" data-vi="MỚI">신상품</div></div>
+          <div class="pb"><div class="pn">Retinol Essence</div><div class="pty" data-ko="레티놀 에센스 50ml" data-en="Retinol Essence 50ml" data-vi="Essence Retinol 50ml">레티놀 에센스 50ml</div></div>
+        </div>
+        <div class="pc pc-new" onclick="openDetail('essence_cica')">
+          <div class="pt"><div class="pi" style="background-image:url('images/essence_cica.png');background-size:contain;background-color:#eef6f2;"></div><div class="pch">ESSENCE</div><div class="pnew" data-ko="신상품" data-en="NEW" data-vi="MỚI">신상품</div></div>
+          <div class="pb"><div class="pn">Cica Calming Essence</div><div class="pty" data-ko="시카 에센스 50ml" data-en="Cica Calming Essence 50ml" data-vi="Essence Cica Calming 50ml">시카 에센스 50ml</div></div>
+        </div>
         <div class="pc" onclick="openDetail('lotion')">
           <div class="pt"><div class="pi" style="background-image:url('images/lotion.jpeg')"></div><div class="pch">LOTION</div></div>
           <div class="pb"><div class="pn">24K Gold Collagen Lotion</div><div class="pty" data-ko="스킨/로션 130ml" data-en="Skin/Lotion 130ml" data-vi="Toner/Lotion 130ml">스킨/로션 130ml</div></div>
@@ -389,7 +425,8 @@ html,body{margin:0;padding:0;}
       <!-- 공지사항 -->
       <div class="cw">
         <div class="ct" data-ko="공지사항" data-en="Notice" data-vi="Thông báo">공지사항</div>
-        <div class="nr" onclick="showPage('notice-page')" style="cursor:pointer"><div class="nn">01</div><div><div class="nt" data-ko="K.Solegio 신제품 출시 안내" data-en="K.Solegio New Product Launch" data-vi="Ra mắt sản phẩm mới K.Solegio" data-vi="Ra mắt sản phẩm mới K.Solegio">K.Solegio 신제품 출시 안내</div><div class="nd">2025.04.20</div></div></div>
+        <div class="nr" onclick="showPage('notice-page')" style="cursor:pointer;background:#FFFDF8;border-radius:8px;padding:10px 0 10px 4px;margin:-2px 0;"><div class="nn" style="color:var(--gold);font-size:13px;font-weight:700;padding-top:2px;">NEW</div><div><div class="nt" data-ko="K.Solegio 에센스 4종 신규 입점 안내" data-en="K.Solegio 4 New Essence Products" data-vi="Ra mắt 4 Essence mới K.Solegio">K.Solegio 에센스 4종 신규 입점 안내</div><div class="nd">2025.05.10</div></div></div>
+        <div class="nr" onclick="showPage('notice-page')" style="cursor:pointer"><div class="nn">01</div><div><div class="nt" data-ko="K.Solegio 신제품 출시 안내" data-en="K.Solegio New Product Launch" data-vi="Ra mắt sản phẩm mới K.Solegio">K.Solegio 신제품 출시 안내</div><div class="nd">2025.04.20</div></div></div>
         <div class="nr" onclick="showPage('notice-page')" style="cursor:pointer"><div class="nn">02</div><div><div class="nt" data-ko="베트남어 지원 업데이트 완료" data-en="Vietnamese Language Support Updated" data-vi="Đã cập nhật hỗ trợ tiếng Việt" data-vi="Đã cập nhật hỗ trợ tiếng Việt">베트남어 지원 업데이트 완료</div><div class="nd">2025.04.15</div></div></div>
         <div class="nr" onclick="showPage('notice-page')" style="cursor:pointer"><div class="nn">03</div><div><div class="nt" data-ko="LINKO Cosmetic 플랫폼 오픈" data-en="LINKO Cosmetic Platform Launch" data-vi="Ra mắt nền tảng LINKO Cosmetic" data-vi="Ra mắt nền tảng LINKO Cosmetic">LINKO Cosmetic 플랫폼 오픈</div><div class="nd">2025.04.01</div></div></div>
         <div class="nr" onclick="showPage('notice-page')" style="cursor:pointer"><div class="nn" style="font-size:12px;padding-top:6px;">Q&A</div><div><div class="nt" data-ko="자주 묻는 질문 (Q&A)" data-en="FAQ (Q&A)" data-vi="Câu hỏi thường gặp (Q&A)">자주 묻는 질문 (Q&A)</div><div class="nd" data-ko="업데이트 준비 중" data-en="Coming Soon" data-vi="Sắp cập nhật">업데이트 준비 중</div></div></div>
@@ -577,19 +614,24 @@ html,body{margin:0;padding:0;}
         <div style="font-size:11px;color:rgba(255,255,255,0.4);letter-spacing:1px;" data-ko="제목" data-en="Title" data-vi="Tiêu đề">제목</div>
         <div style="font-size:11px;color:rgba(255,255,255,0.4);letter-spacing:1px;text-align:right;" data-ko="날짜" data-en="Date" data-vi="Ngày">날짜</div>
       </div>
-      <div onclick="openNotice(0)" style="display:grid;grid-template-columns:64px 1fr 110px;padding:20px 24px;gap:16px;border-bottom:0.5px solid var(--bd);cursor:pointer;transition:background .2s;" onmouseover="this.style.background='var(--goldp)'" onmouseout="this.style.background='white'">
-        <div style="font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--goldl);">01</div>
-        <div><div style="font-size:13px;font-weight:500;margin-bottom:5px;" data-ko="K.Solegio 신제품 출시 안내" data-en="K.Solegio New Product Launch" data-vi="Ra mắt sản phẩm mới K.Solegio" data-vi="Ra mắt sản phẩm mới K.Solegio">K.Solegio 신제품 출시 안내</div><div style="font-size:10px;color:var(--gold);" data-ko="신제품" data-en="New Product" data-vi="Sản phẩm mới">신제품</div></div>
-        <div style="font-size:11px;color:var(--mid);text-align:right;padding-top:3px;">2025.04.20</div>
+      <div onclick="openNotice(0)" style="display:grid;grid-template-columns:64px 1fr 110px;padding:20px 24px;gap:16px;border-bottom:0.5px solid var(--bd);cursor:pointer;transition:background .2s;background:#FFFDF8;" onmouseover="this.style.background='var(--goldp)'" onmouseout="this.style.background='#FFFDF8'">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--gold);font-weight:600;">NEW</div>
+        <div><div style="font-size:13px;font-weight:500;margin-bottom:5px;" data-ko="K.Solegio 에센스 4종 신규 입점 안내" data-en="K.Solegio 4 New Essence Products Now Available" data-vi="Ra mắt 4 sản phẩm Essence mới K.Solegio">K.Solegio 에센스 4종 신규 입점 안내</div><div style="font-size:10px;color:var(--gold);" data-ko="신상품" data-en="New Product" data-vi="Sản phẩm mới">신상품</div></div>
+        <div style="font-size:11px;color:var(--mid);text-align:right;padding-top:3px;">2025.05.10</div>
       </div>
       <div onclick="openNotice(1)" style="display:grid;grid-template-columns:64px 1fr 110px;padding:20px 24px;gap:16px;border-bottom:0.5px solid var(--bd);cursor:pointer;transition:background .2s;" onmouseover="this.style.background='var(--goldp)'" onmouseout="this.style.background='white'">
-        <div style="font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--goldl);">02</div>
-        <div><div style="font-size:13px;font-weight:500;margin-bottom:5px;" data-ko="베트남어 지원 업데이트 완료" data-en="Vietnamese Language Support Updated" data-vi="Đã cập nhật hỗ trợ tiếng Việt" data-vi="Đã cập nhật hỗ trợ tiếng Việt">베트남어 지원 업데이트 완료</div><div style="font-size:10px;color:var(--gold);" data-ko="업데이트" data-en="Update" data-vi="Cập nhật">업데이트</div></div>
-        <div style="font-size:11px;color:var(--mid);text-align:right;padding-top:3px;">2025.04.15</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--goldl);">01</div>
+        <div><div style="font-size:13px;font-weight:500;margin-bottom:5px;" data-ko="K.Solegio 신제품 출시 안내" data-en="K.Solegio New Product Launch" data-vi="Ra mắt sản phẩm mới K.Solegio">K.Solegio 신제품 출시 안내</div><div style="font-size:10px;color:var(--gold);" data-ko="신제품" data-en="New Product" data-vi="Sản phẩm mới">신제품</div></div>
+        <div style="font-size:11px;color:var(--mid);text-align:right;padding-top:3px;">2025.04.20</div>
       </div>
       <div onclick="openNotice(2)" style="display:grid;grid-template-columns:64px 1fr 110px;padding:20px 24px;gap:16px;border-bottom:0.5px solid var(--bd);cursor:pointer;transition:background .2s;" onmouseover="this.style.background='var(--goldp)'" onmouseout="this.style.background='white'">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--goldl);">02</div>
+        <div><div style="font-size:13px;font-weight:500;margin-bottom:5px;" data-ko="베트남어 지원 업데이트 완료" data-en="Vietnamese Language Support Updated" data-vi="Đã cập nhật hỗ trợ tiếng Việt">베트남어 지원 업데이트 완료</div><div style="font-size:10px;color:var(--gold);" data-ko="업데이트" data-en="Update" data-vi="Cập nhật">업데이트</div></div>
+        <div style="font-size:11px;color:var(--mid);text-align:right;padding-top:3px;">2025.04.15</div>
+      </div>
+      <div onclick="openNotice(3)" style="display:grid;grid-template-columns:64px 1fr 110px;padding:20px 24px;gap:16px;border-bottom:0.5px solid var(--bd);cursor:pointer;transition:background .2s;" onmouseover="this.style.background='var(--goldp)'" onmouseout="this.style.background='white'">
         <div style="font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--goldl);">03</div>
-        <div><div style="font-size:13px;font-weight:500;margin-bottom:5px;" data-ko="LINKO Cosmetic 플랫폼 오픈" data-en="LINKO Cosmetic Platform Launch" data-vi="Ra mắt nền tảng LINKO Cosmetic" data-vi="Ra mắt nền tảng LINKO Cosmetic">LINKO Cosmetic 플랫폼 오픈</div><div style="font-size:10px;color:var(--gold);" data-ko="오픈" data-en="Launch" data-vi="Ra mắt">오픈</div></div>
+        <div><div style="font-size:13px;font-weight:500;margin-bottom:5px;" data-ko="LINKO Cosmetic 플랫폼 오픈" data-en="LINKO Cosmetic Platform Launch" data-vi="Ra mắt nền tảng LINKO Cosmetic">LINKO Cosmetic 플랫폼 오픈</div><div style="font-size:10px;color:var(--gold);" data-ko="오픈" data-en="Launch" data-vi="Ra mắt">오픈</div></div>
         <div style="font-size:11px;color:var(--mid);text-align:right;padding-top:3px;">2025.04.01</div>
       </div>
       <div onclick="openNotice(3)" style="display:grid;grid-template-columns:64px 1fr 110px;padding:20px 24px;gap:16px;cursor:pointer;transition:background .2s;" onmouseover="this.style.background='var(--goldp)'" onmouseout="this.style.background='white'">
@@ -728,6 +770,46 @@ const products={
     ingredient:'정제수, 글리세린, 다이프로필렌글라이콜, 베타인, 글리세릴폴리아크릴레이트, 피이지-60하이드로제네이티드캐스터오일, 페녹시에탄올, 알란토인, 달팽이점액여과물, 알로에베라잎추출물, 하이드롤라이즈드콜라겐, 트라이에탄올아민, 카보머, 뽕나무껍질추출물, 녹차추출물, 하이드록시에틸셀룰로스, 동충하초추출물, 다이포타슘글리시리제이트, 소듐하이알루로네이트, 하이알루로닉애씨드, 하이드롤라이즈드키틴, 홍삼추출물, 향료, 1,2-헥산다이올, 아데노신, 다이소듐디티에이, 24K 골드',
     howto:{ko:['스킨 케어 후 에센스 단계에서 사용합니다.','적당량(2~3방울)을 손바닥에 덜어냅니다.','얼굴 전체에 골고루 펴 발라줍니다.','피부에 완전히 흡수될 때까지 두드려줍니다.','크림 등 후속 제품으로 마무리합니다.'],en:['Use at the essence step of your skincare routine.','Dispense 2–3 drops onto your palm.','Apply evenly across your face.','Pat gently until fully absorbed.','Follow up with moisturizer or cream.'],vi:['Sử dụng ở bước essence trong quy trình dưỡng da.','Lấy 2-3 giọt ra lòng bàn tay.','Thoa đều lên toàn bộ khuôn mặt.','Vỗ nhẹ cho đến khi thấm hoàn toàn.','Kết thúc bằng kem dưỡng.']}
   },
+  essence_hyaluronic:{
+    name:'Hyaluronic Essence',
+    sub:{ko:'히알루론산 에센스 50ml',en:'Hyaluronic Essence 50ml',vi:'Essence Hyaluronic 50ml'},
+    imgs:['images/essence_hyaluronic.png','images/essence1.jpeg','images/essence2.jpeg'],
+    desc:{ko:'고농도 히알루론산이 피부 속 깊은 곳까지 수분을 채워주는 집중 보습 에센스. 건조하고 탄력 없는 피부에 촉촉한 수분감을 오래 유지시켜 줍니다.',en:'An intensive moisturizing essence filled with high-concentration hyaluronic acid that deeply hydrates skin. Maintains lasting moisture for dry and dull skin.',vi:'Essence dưỡng ẩm chuyên sâu với axit hyaluronic nồng độ cao, cấp ẩm sâu vào da. Duy trì độ ẩm lâu dài cho da khô và thiếu sức sống.'},
+    tags:['Hyaluronic Acid','Deep Moisture','Plumping'],
+    specs:{ko:[{l:'용량',v:'50ml'},{l:'제형',v:'에센스'},{l:'피부타입',v:'건성·민감성'},{l:'주요성분',v:'히알루론산, 베타인'},{l:'제조국',v:'대한민국'},{l:'브랜드',v:'K.SOLEGIO'}],en:[{l:'Volume',v:'50ml'},{l:'Type',v:'Essence'},{l:'Skin Type',v:'Dry, Sensitive'},{l:'Key Ingredients',v:'Hyaluronic Acid, Betaine'},{l:'Made in',v:'Korea'},{l:'Brand',v:'K.SOLEGIO'}],vi:[{l:'Dung tích',v:'50ml'},{l:'Loại',v:'Essence'},{l:'Loại da',v:'Da khô, nhạy cảm'},{l:'Thành phần chính',v:'Axit Hyaluronic, Betaine'},{l:'Xuất xứ',v:'Hàn Quốc'},{l:'Thương hiệu',v:'K.SOLEGIO'}]},
+    ingredient:'정제수, 글리세린, 부틸렌글라이콜, 소듐하이알루로네이트, 하이알루로닉애씨드, 하이드롤라이즈드하이알루로닉애씨드, 베타인, 알란토인, 판테놀, 나이아신아마이드, 알로에베라잎추출물, 카보머, 트라이에탄올아민, 페녹시에탄올, 1,2-헥산다이올, 다이소듐이디티에이',
+    howto:{ko:['세안 후 스킨 케어 단계에서 사용합니다.','적당량을 손바닥에 덜어냅니다.','얼굴 전체에 고르게 펴 발라줍니다.','가볍게 두드려 흡수시킵니다.'],en:['Use after cleansing in your skincare routine.','Dispense an appropriate amount onto your palm.','Apply evenly across your face.','Pat gently until absorbed.'],vi:['Sử dụng sau khi rửa mặt trong quy trình dưỡng da.','Lấy lượng vừa đủ ra lòng bàn tay.','Thoa đều lên toàn bộ khuôn mặt.','Vỗ nhẹ cho đến khi thấm.']}
+  },
+  essence_collagen:{
+    name:'Collagen Essence',
+    sub:{ko:'콜라겐 에센스 50ml',en:'Collagen Essence 50ml',vi:'Essence Collagen 50ml'},
+    imgs:['images/essence_group1.png','images/essence_group2.png','images/essence1.jpeg'],
+    desc:{ko:'고농도 콜라겐 성분이 피부 탄력을 회복시키고 주름을 완화시켜 주는 안티에이징 에센스. 탄력 있고 젊은 피부로 가꿔줍니다.',en:'An anti-aging essence with high-concentration collagen that restores skin elasticity and reduces wrinkles. Helps maintain youthful and firm skin.',vi:'Essence chống lão hóa với collagen nồng độ cao, phục hồi độ đàn hồi và giảm nếp nhăn. Giúp duy trì làn da căng mịn và trẻ trung.'},
+    tags:['Collagen','Anti-aging','Firming'],
+    specs:{ko:[{l:'용량',v:'50ml'},{l:'제형',v:'에센스'},{l:'피부타입',v:'건성·노화'},{l:'주요성분',v:'가수분해콜라겐, 세라마이드'},{l:'제조국',v:'대한민국'},{l:'브랜드',v:'K.SOLEGIO'}],en:[{l:'Volume',v:'50ml'},{l:'Type',v:'Essence'},{l:'Skin Type',v:'Dry, Mature'},{l:'Key Ingredients',v:'Hydrolyzed Collagen, Ceramide'},{l:'Made in',v:'Korea'},{l:'Brand',v:'K.SOLEGIO'}],vi:[{l:'Dung tích',v:'50ml'},{l:'Loại',v:'Essence'},{l:'Loại da',v:'Da khô, lão hóa'},{l:'Thành phần chính',v:'Collagen thủy phân, Ceramide'},{l:'Xuất xứ',v:'Hàn Quốc'},{l:'Thương hiệu',v:'K.SOLEGIO'}]},
+    ingredient:'정제수, 글리세린, 하이드롤라이즈드콜라겐, 콜라겐, 부틸렌글라이콜, 세라마이드엔피, 나이아신아마이드, 베타인, 소듐하이알루로네이트, 알란토인, 판테놀, 알로에베라잎추출물, 카보머, 트라이에탄올아민, 아데노신, 페녹시에탄올, 1,2-헥산다이올',
+    howto:{ko:['세안 후 스킨 케어 단계에서 사용합니다.','적당량(2~3방울)을 손바닥에 덜어냅니다.','얼굴 전체에 고르게 펴 발라줍니다.','탄력이 필요한 부위에 집중적으로 두드려 흡수시킵니다.'],en:['Use after cleansing in your skincare routine.','Dispense 2–3 drops onto your palm.','Apply evenly across your face.','Focus on areas needing extra firmness and pat until absorbed.'],vi:['Sử dụng sau khi rửa mặt.','Lấy 2-3 giọt ra lòng bàn tay.','Thoa đều lên toàn bộ khuôn mặt.','Tập trung vỗ nhẹ vào các vùng cần nâng cơ.']}
+  },
+  essence_retinol:{
+    name:'Retinol Essence',
+    sub:{ko:'레티놀 에센스 50ml',en:'Retinol Essence 50ml',vi:'Essence Retinol 50ml'},
+    imgs:['images/essence_retinol.png','images/essence2.jpeg','images/essence3.jpeg'],
+    desc:{ko:'순수 레티놀 성분이 피부 세포 재생을 촉진하고 주름 개선 및 피부결을 매끄럽게 정돈해주는 강력한 안티에이징 에센스입니다.',en:'A powerful anti-aging essence with pure retinol that promotes skin cell renewal, improves wrinkles, and smooths skin texture.',vi:'Essence chống lão hóa mạnh mẽ với retinol tinh khiết, thúc đẩy tái tạo tế bào da, cải thiện nếp nhăn và làm mịn kết cấu da.'},
+    tags:['Retinol','Cell Renewal','Wrinkle Care'],
+    specs:{ko:[{l:'용량',v:'50ml'},{l:'제형',v:'에센스'},{l:'피부타입',v:'노화·복합성'},{l:'주요성분',v:'레티놀, 나이아신아마이드'},{l:'제조국',v:'대한민국'},{l:'브랜드',v:'K.SOLEGIO'}],en:[{l:'Volume',v:'50ml'},{l:'Type',v:'Essence'},{l:'Skin Type',v:'Mature, Combination'},{l:'Key Ingredients',v:'Retinol, Niacinamide'},{l:'Made in',v:'Korea'},{l:'Brand',v:'K.SOLEGIO'}],vi:[{l:'Dung tích',v:'50ml'},{l:'Loại',v:'Essence'},{l:'Loại da',v:'Da lão hóa, hỗn hợp'},{l:'Thành phần chính',v:'Retinol, Niacinamide'},{l:'Xuất xứ',v:'Hàn Quốc'},{l:'Thương hiệu',v:'K.SOLEGIO'}]},
+    ingredient:'정제수, 글리세린, 부틸렌글라이콜, 레티놀, 나이아신아마이드, 소듐하이알루로네이트, 베타인, 알란토인, 판테놀, 토코페롤, 알로에베라잎추출물, 카보머, 트라이에탄올아민, 아데노신, 페녹시에탄올, 1,2-헥산다이올, 다이소듐이디티에이',
+    howto:{ko:['저녁 스킨케어 단계에서 사용합니다 (야간 전용 권장).','처음 사용 시 격일로 시작해 피부 적응 후 매일 사용합니다.','적당량을 손바닥에 덜어 얼굴 전체에 펴 발라줍니다.','눈가는 피해서 사용합니다.','반드시 다음 날 아침 자외선 차단제를 사용합니다.'],en:['Use in your evening skincare routine (nighttime use recommended).','Start every other day and increase to daily use once skin adjusts.','Apply an appropriate amount evenly across your face.','Avoid the eye area.','Always apply sunscreen the next morning.'],vi:['Sử dụng trong quy trình dưỡng da buổi tối (khuyến nghị dùng ban đêm).','Bắt đầu cách ngày, sau khi da thích nghi thì dùng hàng ngày.','Thoa lượng vừa đủ đều lên mặt.','Tránh vùng mắt.','Luôn dùng kem chống nắng vào sáng hôm sau.']}
+  },
+  essence_cica:{
+    name:'Cica Calming Essence',
+    sub:{ko:'시카 카밍 에센스 50ml',en:'Cica Calming Essence 50ml',vi:'Essence Cica Calming 50ml'},
+    imgs:['images/essence_cica.png','images/essence1.jpeg','images/essence3.jpeg'],
+    desc:{ko:'센텔라아시아티카 성분이 예민하고 손상된 피부를 진정시키고 피부 장벽을 강화해주는 카밍 에센스. 붉음증 완화와 피부 재생에 탁월합니다.',en:'A calming essence with Centella Asiatica that soothes sensitive and damaged skin while reinforcing the skin barrier. Excellent for reducing redness and regenerating skin.',vi:'Essence làm dịu với Centella Asiatica, làm dịu da nhạy cảm và hư tổn đồng thời củng cố hàng rào bảo vệ da. Hiệu quả vượt trội trong việc giảm đỏ da và tái tạo da.'},
+    tags:['Cica','Calming','Barrier Repair'],
+    specs:{ko:[{l:'용량',v:'50ml'},{l:'제형',v:'에센스'},{l:'피부타입',v:'민감성·예민성'},{l:'주요성분',v:'센텔라아시아티카, 마데카소사이드'},{l:'제조국',v:'대한민국'},{l:'브랜드',v:'K.SOLEGIO'}],en:[{l:'Volume',v:'50ml'},{l:'Type',v:'Essence'},{l:'Skin Type',v:'Sensitive, Irritated'},{l:'Key Ingredients',v:'Centella Asiatica, Madecassoside'},{l:'Made in',v:'Korea'},{l:'Brand',v:'K.SOLEGIO'}],vi:[{l:'Dung tích',v:'50ml'},{l:'Loại',v:'Essence'},{l:'Loại da',v:'Da nhạy cảm, kích ứng'},{l:'Thành phần chính',v:'Centella Asiatica, Madecassoside'},{l:'Xuất xứ',v:'Hàn Quốc'},{l:'Thương hiệu',v:'K.SOLEGIO'}]},
+    ingredient:'정제수, 글리세린, 부틸렌글라이콜, 센텔라아시아티카추출물, 마데카소사이드, 아시아티코사이드, 마데카식애씨드, 아시아틱애씨드, 베타인, 소듐하이알루로네이트, 알란토인, 판테놀, 비사보롤, 알로에베라잎추출물, 카보머, 트라이에탄올아민, 페녹시에탄올, 1,2-헥산다이올',
+    howto:{ko:['세안 후 자극받은 피부에 즉시 사용합니다.','적당량을 손바닥에 덜어냅니다.','얼굴 전체에 고르게 펴 발라줍니다.','진정이 필요한 부위에 집중적으로 도포합니다.','가볍게 두드려 흡수시킵니다.'],en:['Apply immediately to irritated skin after cleansing.','Dispense an appropriate amount onto your palm.','Apply evenly across your face.','Focus application on areas that need extra calming.','Pat gently until absorbed.'],vi:['Thoa ngay lên vùng da kích ứng sau khi rửa mặt.','Lấy lượng vừa đủ ra lòng bàn tay.','Thoa đều lên toàn bộ khuôn mặt.','Tập trung thoa vào các vùng cần làm dịu thêm.','Vỗ nhẹ cho đến khi thấm.']}
+  },
   suncream:{
     name:'Suncream Travel SPF50+',
     sub:{ko:'선크림 50ml · SPF50+ PA+++',en:'Suncream 50ml · SPF50+ PA+++',vi:'Kem chống nắng 50ml · SPF50+ PA+++'},
@@ -755,7 +837,7 @@ function setLang(l){
 }
 
 // ── 페이지 전환 ──
-let cur=0,total=4,tm,floatOpen=false,curProduct=null,prevPage='main-page';
+let cur=0,total=6,tm,floatOpen=false,curProduct=null,prevPage='main-page';
 function showPage(id, pushHistory=true){
   document.querySelectorAll('.page').forEach(p=>{p.style.display='none';p.classList.remove('active');});
   const target=document.getElementById(id);
@@ -847,6 +929,10 @@ function selectBrand(key,el){
         <div class="pc" data-cat="skincare" onclick="openDetail('lotion')"><div class="pt"><div class="pi" style="background-image:url('images/lotion.jpeg')"></div><div class="pch">LOTION</div></div><div class="pb"><div class="pn">24K Gold Collagen Lotion</div><div class="pty">스킨/로션 130ml</div></div></div>
         <div class="pc" data-cat="skincare" onclick="openDetail('skin')"><div class="pt"><div class="pi" style="background-image:url('images/skin.jpeg')"></div><div class="pch">SKIN</div></div><div class="pb"><div class="pn">24K Gold Collagen Skin</div><div class="pty">스킨 130ml</div></div></div>
         <div class="pc" data-cat="essence" onclick="openDetail('essence')"><div class="pt"><div class="pi" style="background-image:url('images/essence.jpeg')"></div><div class="pch">ESSENCE</div></div><div class="pb"><div class="pn">24K Gold Premium Essence</div><div class="pty">에센스 130ml</div></div></div>
+        <div class="pc" data-cat="essence" onclick="openDetail('essence_hyaluronic')"><div class="pt"><div class="pi" style="background-image:url('images/essence_hyaluronic.png');background-size:contain;background-color:#e8f0fa;"></div><div class="pch">ESSENCE</div></div><div class="pb"><div class="pn">Hyaluronic Essence</div><div class="pty">히알루론산 에센스 50ml</div></div></div>
+        <div class="pc" data-cat="essence" onclick="openDetail('essence_collagen')"><div class="pt"><div class="pi" style="background-image:url('images/essence_group1.png');background-size:contain;background-color:#e8f5ea;"></div><div class="pch">ESSENCE</div></div><div class="pb"><div class="pn">Collagen Essence</div><div class="pty">콜라겐 에센스 50ml</div></div></div>
+        <div class="pc" data-cat="essence" onclick="openDetail('essence_retinol')"><div class="pt"><div class="pi" style="background-image:url('images/essence_retinol.png');background-size:contain;background-color:#faf0e8;"></div><div class="pch">ESSENCE</div></div><div class="pb"><div class="pn">Retinol Essence</div><div class="pty">레티놀 에센스 50ml</div></div></div>
+        <div class="pc" data-cat="essence" onclick="openDetail('essence_cica')"><div class="pt"><div class="pi" style="background-image:url('images/essence_cica.png');background-size:contain;background-color:#e8f5ee;"></div><div class="pch">ESSENCE</div></div><div class="pb"><div class="pn">Cica Calming Essence</div><div class="pty">시카 에센스 50ml</div></div></div>
         <div class="pc" data-cat="suncare" onclick="openDetail('suncream')"><div class="pt"><div class="pi" style="background-image:url('images/suncream.jpeg')"></div><div class="pch">SUNCREAM</div></div><div class="pb"><div class="pn">Suncream Travel SPF50+</div><div class="pty">선크림 50ml</div></div></div>
       </div>`;
   } else {
@@ -858,6 +944,129 @@ function filterCat(cat,el){
   document.querySelectorAll('.cat-tab').forEach(t=>t.classList.remove('on'));
   el.classList.add('on');
   document.querySelectorAll('#brand-grid .pc').forEach(c=>{c.style.display=(cat==='all'||c.dataset.cat===cat)?'block':'none';});
+}
+
+// ── 공지사항 ──
+const notices=[
+  {
+    category:{ko:'신상품',en:'New Product',vi:'Sản phẩm mới'},
+    title:{ko:'K.Solegio 에센스 4종 신규 입점 안내',en:'K.Solegio 4 New Essence Products Now Available',vi:'Ra mắt 4 sản phẩm Essence mới K.Solegio'},
+    date:'2025.05.10',
+    body:{
+      ko:`안녕하세요, LINKO Cosmetic입니다.
+
+K.Solegio의 신규 에센스 4종이 LINKO Cosmetic 플랫폼에 공식 입점되었습니다.
+
+■ 신규 입점 제품
+
+✦ Hyaluronic Essence (히알루론산 에센스)
+   고농도 히알루론산이 피부 깊숙이 수분을 공급하는 집중 보습 에센스
+   용량: 50ml | 피부타입: 건성·민감성
+
+✦ Collagen Essence (콜라겐 에센스)
+   콜라겐 성분이 피부 탄력을 회복시키는 안티에이징 에센스
+   용량: 50ml | 피부타입: 건성·노화
+
+✦ Retinol Essence (레티놀 에센스)
+   순수 레티놀로 세포 재생을 촉진하고 주름을 개선하는 에센스 (야간 전용)
+   용량: 50ml | 피부타입: 노화·복합성
+
+✦ Cica Calming Essence (시카 카밍 에센스)
+   센텔라아시아티카 성분으로 민감한 피부를 진정시키는 카밍 에센스
+   용량: 50ml | 피부타입: 민감성·예민성
+
+■ 도매 문의
+위 제품에 대한 도매 가격, MOQ, 납기 등 상세 문의는 카카오톡 채널 또는 문의하기 페이지를 이용해 주세요.
+
+감사합니다.
+LINKO Cosmetic 드림`,
+      en:`Hello, this is LINKO Cosmetic.
+
+K.Solegio's 4 new essence products are now officially available on the LINKO Cosmetic platform.
+
+■ New Products
+
+✦ Hyaluronic Essence
+   Intensive moisturizing essence with high-concentration hyaluronic acid
+   Volume: 50ml | Skin Type: Dry, Sensitive
+
+✦ Collagen Essence
+   Anti-aging essence that restores skin elasticity with collagen
+   Volume: 50ml | Skin Type: Dry, Mature
+
+✦ Retinol Essence
+   Night-use essence that promotes cell renewal and reduces wrinkles
+   Volume: 50ml | Skin Type: Mature, Combination
+
+✦ Cica Calming Essence
+   Soothing essence with Centella Asiatica for sensitive skin
+   Volume: 50ml | Skin Type: Sensitive, Irritated
+
+■ Wholesale Inquiries
+For pricing, MOQ, and delivery details, please use our KakaoTalk channel or contact form.
+
+Thank you.
+LINKO Cosmetic`,
+      vi:`Xin chào, đây là LINKO Cosmetic.
+
+4 sản phẩm Essence mới của K.Solegio đã chính thức có mặt trên nền tảng LINKO Cosmetic.
+
+■ Sản phẩm mới
+
+✦ Hyaluronic Essence
+   Essence dưỡng ẩm chuyên sâu với axit hyaluronic nồng độ cao
+   Dung tích: 50ml | Loại da: Khô, Nhạy cảm
+
+✦ Collagen Essence
+   Essence chống lão hóa phục hồi độ đàn hồi da với collagen
+   Dung tích: 50ml | Loại da: Khô, Lão hóa
+
+✦ Retinol Essence
+   Essence dùng ban đêm thúc đẩy tái tạo tế bào và giảm nếp nhăn
+   Dung tích: 50ml | Loại da: Lão hóa, Hỗn hợp
+
+✦ Cica Calming Essence
+   Essence làm dịu da nhạy cảm với Centella Asiatica
+   Dung tích: 50ml | Loại da: Nhạy cảm, Kích ứng
+
+■ Liên hệ bán sỉ
+Để biết giá, MOQ và thời gian giao hàng, vui lòng sử dụng kênh KakaoTalk hoặc trang liên hệ.
+
+Cảm ơn bạn.
+LINKO Cosmetic`
+    }
+  },
+  {
+    category:{ko:'신제품',en:'New Product',vi:'Sản phẩm mới'},
+    title:{ko:'K.Solegio 신제품 출시 안내',en:'K.Solegio New Product Launch',vi:'Ra mắt sản phẩm mới K.Solegio'},
+    date:'2025.04.20',
+    body:{ko:`안녕하세요, LINKO Cosmetic입니다.\n\nK.Solegio의 24K 골드 콜라겐 스킨케어 라인이 정식 출시되었습니다.\n\n■ 출시 제품\n• 24K Gold Collagen Lotion (130ml)\n• 24K Gold Collagen Skin (130ml)\n• 24K Gold Premium Essence (130ml)\n\n도매 문의는 카카오톡 채널 또는 문의하기 페이지를 이용해 주세요.\n\n감사합니다.`,en:`Hello, this is LINKO Cosmetic.\n\nK.Solegio's 24K Gold Collagen Skincare Line has officially launched.\n\n■ Products\n• 24K Gold Collagen Lotion (130ml)\n• 24K Gold Collagen Skin (130ml)\n• 24K Gold Premium Essence (130ml)\n\nFor wholesale inquiries, please contact us via KakaoTalk or the inquiry form.\n\nThank you.`,vi:`Xin chào, đây là LINKO Cosmetic.\n\nDòng sản phẩm K.Solegio 24K Gold Collagen đã chính thức ra mắt.\n\n■ Sản phẩm\n• 24K Gold Collagen Lotion (130ml)\n• 24K Gold Collagen Skin (130ml)\n• 24K Gold Premium Essence (130ml)\n\nLiên hệ bán sỉ qua KakaoTalk hoặc trang liên hệ.\n\nCảm ơn.`}
+  },
+  {
+    category:{ko:'업데이트',en:'Update',vi:'Cập nhật'},
+    title:{ko:'베트남어 지원 업데이트 완료',en:'Vietnamese Language Support Updated',vi:'Đã cập nhật hỗ trợ tiếng Việt'},
+    date:'2025.04.15',
+    body:{ko:`안녕하세요, LINKO Cosmetic입니다.\n\nLINKO Cosmetic 플랫폼에 베트남어(VI) 언어 지원이 추가되었습니다.\n\n이제 한국어, 영어, 베트남어로 플랫폼을 이용하실 수 있습니다.\n\n감사합니다.`,en:`Hello, this is LINKO Cosmetic.\n\nVietnamese (VI) language support has been added to the LINKO Cosmetic platform.\n\nYou can now use the platform in Korean, English, and Vietnamese.\n\nThank you.`,vi:`Xin chào, đây là LINKO Cosmetic.\n\nHỗ trợ ngôn ngữ tiếng Việt (VI) đã được thêm vào nền tảng LINKO Cosmetic.\n\nBạn có thể sử dụng nền tảng bằng tiếng Hàn, tiếng Anh và tiếng Việt.\n\nCảm ơn.`}
+  },
+  {
+    category:{ko:'오픈',en:'Launch',vi:'Ra mắt'},
+    title:{ko:'LINKO Cosmetic 플랫폼 오픈',en:'LINKO Cosmetic Platform Launch',vi:'Ra mắt nền tảng LINKO Cosmetic'},
+    date:'2025.04.01',
+    body:{ko:`안녕하세요.\n\nLINKO Cosmetic이 공식 오픈하였습니다.\n\nLINKO Cosmetic은 프리미엄 K-뷰티 제조사와 글로벌 셀러를 연결하는 B2B 플랫폼입니다.\n\n앞으로도 많은 관심과 이용 부탁드립니다.\n\n감사합니다.`,en:`Hello.\n\nLINKO Cosmetic has officially launched.\n\nLINKO Cosmetic is a B2B platform connecting premium K-Beauty manufacturers with global sellers.\n\nWe look forward to your continued interest and support.\n\nThank you.`,vi:`Xin chào.\n\nLINKO Cosmetic đã chính thức ra mắt.\n\nLINKO Cosmetic là nền tảng B2B kết nối các nhà sản xuất K-Beauty cao cấp với các đối tác bán hàng toàn cầu.\n\nRất mong nhận được sự quan tâm và ủng hộ của bạn.\n\nCảm ơn.`}
+  }
+];
+function openNotice(i){
+  const n=notices[i];
+  document.getElementById('notice-list-view').style.display='none';
+  document.getElementById('notice-detail-view').style.display='block';
+  document.getElementById('notice-category').textContent=n.category[lang]||n.category.ko;
+  document.getElementById('notice-title').textContent=n.title[lang]||n.title.ko;
+  document.getElementById('notice-date').textContent=n.date;
+  document.getElementById('notice-body').textContent=n.body[lang]||n.body.ko;
+}
+function closeNotice(){
+  document.getElementById('notice-list-view').style.display='block';
+  document.getElementById('notice-detail-view').style.display='none';
 }
 
 // ── 문의 폼 ──
