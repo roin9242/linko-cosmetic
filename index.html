@@ -764,12 +764,12 @@ html,body{margin:0;padding:0;}
         <button class="cat-close-btn" onclick="closeCatalog()">✕</button>
       </div>
     </div>
-    <div class="cat-modal-body">
+    <div class="cat-modal-body" id="catModalBody">
       <div class="cat-loading" id="catLoading">
         <div class="cat-loading-spinner"></div>
-        <div class="cat-loading-text" data-ko="카탈로그 불러오는 중..." data-en="Loading catalog..." data-vi="Đang tải...">카탈로그 불러오는 중...</div>
+        <div class="cat-loading-text">카탈로그 불러오는 중...</div>
       </div>
-      <iframe id="catFrame" src="" style="display:none;" onload="onCatalogLoad()"></iframe>
+      <div id="catPages" style="display:none;overflow-y:auto;height:100%;padding:20px;display:flex;flex-direction:column;gap:12px;align-items:center;background:#888;"></div>
     </div>
   </div>
 </div>
@@ -994,18 +994,12 @@ function filterCat(cat,el){
   document.querySelectorAll('#brand-grid .pc').forEach(c=>{c.style.display=(cat==='all'||c.dataset.cat===cat)?'block':'none';});
 }
 
-// ── 카탈로그 모달 ──
+// ── 카탈로그 모달 (PDF.js) ──
+let pdfLoaded=false;
 function openCatalog(){
-  const bg=document.getElementById('catModalBg');
-  const frame=document.getElementById('catFrame');
-  const loading=document.getElementById('catLoading');
-  bg.classList.add('show');
+  document.getElementById('catModalBg').classList.add('show');
   document.body.style.overflow='hidden';
-  if(!frame.src || frame.src==='about:blank' || frame.src===''){
-    loading.style.display='flex';
-    frame.style.display='none';
-    frame.src='catalog.pdf';
-  }
+  if(!pdfLoaded){ loadPdf(); }
 }
 function closeCatalog(){
   document.getElementById('catModalBg').classList.remove('show');
@@ -1014,9 +1008,41 @@ function closeCatalog(){
 function closeCatalogBg(e){
   if(e.target===document.getElementById('catModalBg')) closeCatalog();
 }
-function onCatalogLoad(){
-  document.getElementById('catLoading').style.display='none';
-  document.getElementById('catFrame').style.display='block';
+function loadPdf(){
+  // PDF.js CDN 스크립트 동적 로드
+  const script=document.createElement('script');
+  script.src='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js';
+  script.onload=function(){
+    pdfjsLib.GlobalWorkerOptions.workerSrc='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+    renderPdf('catalog.pdf');
+  };
+  document.head.appendChild(script);
+}
+async function renderPdf(url){
+  try{
+    const loadingTask=pdfjsLib.getDocument(url);
+    const pdf=await loadingTask.promise;
+    const container=document.getElementById('catPages');
+    const loading=document.getElementById('catLoading');
+    const totalPages=pdf.numPages;
+    container.innerHTML='';
+    container.style.display='flex';
+    loading.style.display='none';
+    pdfLoaded=true;
+    // 페이지별 순차 렌더
+    for(let i=1;i<=totalPages;i++){
+      const page=await pdf.getPage(i);
+      const vp=page.getViewport({scale:1.5});
+      const canvas=document.createElement('canvas');
+      canvas.width=vp.width;
+      canvas.height=vp.height;
+      canvas.style.cssText='width:100%;max-width:700px;border-radius:8px;box-shadow:0 4px 20px rgba(0,0,0,.25);background:white;';
+      container.appendChild(canvas);
+      await page.render({canvasContext:canvas.getContext('2d'),viewport:vp}).promise;
+    }
+  } catch(e){
+    document.getElementById('catLoading').innerHTML='<div style="color:#888;font-size:13px;text-align:center;padding:40px;">카탈로그를 불러올 수 없습니다.<br><br><a href="catalog.pdf" download style="color:#C9A96E;text-decoration:none;font-weight:500;">📄 직접 다운로드</a></div>';
+  }
 }
 
 // ── 공지사항 ──
