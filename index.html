@@ -564,6 +564,10 @@ html,body{margin:0;padding:0;}
         <div class="cat-tab" onclick="filterCat('suncare',this)" data-ko="선케어" data-en="Sun Care" data-vi="Chống nắng">선케어</div>
       </div>
       <div class="brand-grid" id="brand-grid">
+        <div class="pc pc-new" data-cat="essence" onclick="openDetail('essence_hyaluronic')"><div class="pt"><div class="pi" style="background-image:url('images/essence_hyaluronic.jpg');background-size:cover;background-position:center;background-color:#f5f5f5;"></div><div class="pch">ESSENCE</div><div class="pnew">신상품</div></div><div class="pb"><div class="pn">Hyaluronic Essence</div><div class="pty" data-ko="히알루론산 에센스 50ml" data-en="Hyaluronic Essence 50ml" data-vi="Essence Hyaluronic 50ml">히알루론산 에센스 50ml</div></div></div>
+        <div class="pc pc-new" data-cat="essence" onclick="openDetail('essence_collagen')"><div class="pt"><div class="pi" style="background-image:url('images/essence_collagen.jpg');background-size:cover;background-position:center;background-color:#f5f5f5;"></div><div class="pch">ESSENCE</div><div class="pnew">신상품</div></div><div class="pb"><div class="pn">Collagen Essence</div><div class="pty" data-ko="콜라겐 에센스 50ml" data-en="Collagen Essence 50ml" data-vi="Essence Collagen 50ml">콜라겐 에센스 50ml</div></div></div>
+        <div class="pc pc-new" data-cat="essence" onclick="openDetail('essence_retinol')"><div class="pt"><div class="pi" style="background-image:url('images/essence_retinol.jpg');background-size:cover;background-position:center;background-color:#f5f5f5;"></div><div class="pch">ESSENCE</div><div class="pnew">신상품</div></div><div class="pb"><div class="pn">Retinol Essence</div><div class="pty" data-ko="레티놀 에센스 50ml" data-en="Retinol Essence 50ml" data-vi="Essence Retinol 50ml">레티놀 에센스 50ml</div></div></div>
+        <div class="pc pc-new" data-cat="essence" onclick="openDetail('essence_cica')"><div class="pt"><div class="pi" style="background-image:url('images/essence_cica.jpg');background-size:cover;background-position:center;background-color:#f5f5f5;"></div><div class="pch">ESSENCE</div><div class="pnew">신상품</div></div><div class="pb"><div class="pn">Cica Calming Essence</div><div class="pty" data-ko="시카 에센스 50ml" data-en="Cica Calming Essence 50ml" data-vi="Essence Cica Calming 50ml">시카 에센스 50ml</div></div></div>
         <div class="pc" data-cat="skincare" onclick="openDetail('lotion')"><div class="pt"><div class="pi" style="background-image:url('images/lotion.jpeg')"></div><div class="pch">LOTION</div></div><div class="pb"><div class="pn">24K Gold Collagen Lotion</div><div class="pty" data-ko="스킨/로션 130ml" data-en="Skin/Lotion 130ml" data-vi="Toner/Lotion 130ml">스킨/로션 130ml</div></div></div>
         <div class="pc" data-cat="skincare" onclick="openDetail('skin')"><div class="pt"><div class="pi" style="background-image:url('images/skin.jpeg')"></div><div class="pch">SKIN</div></div><div class="pb"><div class="pn">24K Gold Collagen Skin</div><div class="pty" data-ko="스킨 130ml" data-en="Skin 130ml" data-vi="Toner 130ml">스킨 130ml</div></div></div>
         <div class="pc" data-cat="essence" onclick="openDetail('essence')"><div class="pt"><div class="pi" style="background-image:url('images/essence.jpeg')"></div><div class="pch">ESSENCE</div></div><div class="pb"><div class="pn">24K Gold Premium Essence</div><div class="pty" data-ko="에센스 130ml" data-en="Essence 130ml" data-vi="Essence 130ml">에센스 130ml</div></div></div>
@@ -966,7 +970,18 @@ function selectBrand(key,el){
   const content=document.getElementById('brand-content');
   if(key==='ksolegio'){
     content.innerHTML=`
-      <div class="brand-header"><div class="brand-header-name">K.Solegio</div><div class="brand-header-desc">24K 골드 콜라겐 — 고보습 프리미엄 스킨케어 라인</div></div>
+      <div class="brand-header">
+        <div class="brand-header-top">
+          <div>
+            <div class="brand-header-name">K.Solegio</div>
+            <div class="brand-header-desc">24K 골드 콜라겐 — 고보습 프리미엄 스킨케어 라인</div>
+          </div>
+          <button class="catalog-btn" onclick="openCatalog()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="11" x2="12" y2="17"/><line x1="9" y1="14" x2="15" y2="14"/></svg>
+            <span>카탈로그 보기</span>
+          </button>
+        </div>
+      </div>
       <div class="cat-tabs">
         <div class="cat-tab on" onclick="filterCat('all',this)">전체</div>
         <div class="cat-tab" onclick="filterCat('skincare',this)">스킨케어</div>
@@ -974,13 +989,13 @@ function selectBrand(key,el){
         <div class="cat-tab" onclick="filterCat('suncare',this)">선케어</div>
       </div>
       <div class="brand-grid" id="brand-grid">
+        <div class="pc pc-new" data-cat="essence" onclick="openDetail('essence_hyaluronic')"><div class="pt"><div class="pi" style="background-image:url('images/essence_hyaluronic.jpg');background-size:cover;background-position:center;background-color:#f5f5f5;"></div><div class="pch">ESSENCE</div><div class="pnew">신상품</div></div><div class="pb"><div class="pn">Hyaluronic Essence</div><div class="pty">히알루론산 에센스 50ml</div></div></div>
+        <div class="pc pc-new" data-cat="essence" onclick="openDetail('essence_collagen')"><div class="pt"><div class="pi" style="background-image:url('images/essence_collagen.jpg');background-size:cover;background-position:center;background-color:#f5f5f5;"></div><div class="pch">ESSENCE</div><div class="pnew">신상품</div></div><div class="pb"><div class="pn">Collagen Essence</div><div class="pty">콜라겐 에센스 50ml</div></div></div>
+        <div class="pc pc-new" data-cat="essence" onclick="openDetail('essence_retinol')"><div class="pt"><div class="pi" style="background-image:url('images/essence_retinol.jpg');background-size:cover;background-position:center;background-color:#f5f5f5;"></div><div class="pch">ESSENCE</div><div class="pnew">신상품</div></div><div class="pb"><div class="pn">Retinol Essence</div><div class="pty">레티놀 에센스 50ml</div></div></div>
+        <div class="pc pc-new" data-cat="essence" onclick="openDetail('essence_cica')"><div class="pt"><div class="pi" style="background-image:url('images/essence_cica.jpg');background-size:cover;background-position:center;background-color:#f5f5f5;"></div><div class="pch">ESSENCE</div><div class="pnew">신상품</div></div><div class="pb"><div class="pn">Cica Calming Essence</div><div class="pty">시카 에센스 50ml</div></div></div>
         <div class="pc" data-cat="skincare" onclick="openDetail('lotion')"><div class="pt"><div class="pi" style="background-image:url('images/lotion.jpeg')"></div><div class="pch">LOTION</div></div><div class="pb"><div class="pn">24K Gold Collagen Lotion</div><div class="pty">스킨/로션 130ml</div></div></div>
         <div class="pc" data-cat="skincare" onclick="openDetail('skin')"><div class="pt"><div class="pi" style="background-image:url('images/skin.jpeg')"></div><div class="pch">SKIN</div></div><div class="pb"><div class="pn">24K Gold Collagen Skin</div><div class="pty">스킨 130ml</div></div></div>
         <div class="pc" data-cat="essence" onclick="openDetail('essence')"><div class="pt"><div class="pi" style="background-image:url('images/essence.jpeg')"></div><div class="pch">ESSENCE</div></div><div class="pb"><div class="pn">24K Gold Premium Essence</div><div class="pty">에센스 130ml</div></div></div>
-        <div class="pc" data-cat="essence" onclick="openDetail('essence_hyaluronic')"><div class="pt"><div class="pi" style="background-image:url('images/essence_hyaluronic.jpg');background-size:cover;background-position:center;background-color:#f5f5f5;"></div><div class="pch">ESSENCE</div></div><div class="pb"><div class="pn">Hyaluronic Essence</div><div class="pty">히알루론산 에센스 50ml</div></div></div>
-        <div class="pc" data-cat="essence" onclick="openDetail('essence_collagen')"><div class="pt"><div class="pi" style="background-image:url('images/essence_collagen.jpg');background-size:cover;background-color:#f5f5f5;"></div><div class="pch">ESSENCE</div></div><div class="pb"><div class="pn">Collagen Essence</div><div class="pty">콜라겐 에센스 50ml</div></div></div>
-        <div class="pc" data-cat="essence" onclick="openDetail('essence_retinol')"><div class="pt"><div class="pi" style="background-image:url('images/essence_retinol.jpg');background-size:cover;background-position:center;background-color:#f5f5f5;"></div><div class="pch">ESSENCE</div></div><div class="pb"><div class="pn">Retinol Essence</div><div class="pty">레티놀 에센스 50ml</div></div></div>
-        <div class="pc" data-cat="essence" onclick="openDetail('essence_cica')"><div class="pt"><div class="pi" style="background-image:url('images/essence_cica.jpg');background-size:cover;background-position:center;background-color:#f5f5f5;"></div><div class="pch">ESSENCE</div></div><div class="pb"><div class="pn">Cica Calming Essence</div><div class="pty">시카 에센스 50ml</div></div></div>
         <div class="pc" data-cat="suncare" onclick="openDetail('suncream')"><div class="pt"><div class="pi" style="background-image:url('images/suncream.jpeg')"></div><div class="pch">SUNCREAM</div></div><div class="pb"><div class="pn">Suncream Travel SPF50+</div><div class="pty">선크림 50ml</div></div></div>
       </div>`;
   } else {
