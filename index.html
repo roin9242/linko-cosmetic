@@ -139,6 +139,37 @@ html,body{margin:0;padding:0;}
 .brand-item-soon{font-size:9px;padding:2px 8px;border-radius:8px;background:var(--goldp);color:var(--gold);font-weight:500;}
 .brand-content{padding:40px;}
 .brand-header{margin-bottom:32px;padding-bottom:24px;border-bottom:0.5px solid var(--bd);}
+.brand-header-top{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;}
+.catalog-btn{display:flex;align-items:center;gap:7px;padding:9px 18px;border-radius:20px;background:white;border:0.5px solid var(--goldl);color:var(--dark);font-size:12px;font-weight:500;cursor:pointer;transition:all .2s;white-space:nowrap;font-family:'Noto Sans KR',sans-serif;flex-shrink:0;}
+.catalog-btn:hover{background:var(--goldp);border-color:var(--gold);}
+.catalog-btn svg{width:14px;height:14px;flex-shrink:0;}
+
+/* 카탈로그 모달 */
+.cat-modal-bg{position:fixed;inset:0;z-index:1000;background:rgba(0,0,0,.75);backdrop-filter:blur(4px);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s;}
+.cat-modal-bg.show{opacity:1;pointer-events:all;}
+.cat-modal{background:white;border-radius:20px;width:90vw;max-width:860px;height:90vh;display:flex;flex-direction:column;overflow:hidden;transform:translateY(16px) scale(.97);transition:transform .3s;}
+.cat-modal-bg.show .cat-modal{transform:translateY(0) scale(1);}
+.cat-modal-head{display:flex;align-items:center;justify-content:space-between;padding:18px 24px;border-bottom:0.5px solid var(--bd);flex-shrink:0;}
+.cat-modal-title{display:flex;align-items:center;gap:10px;}
+.cat-modal-title span{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;letter-spacing:.3px;}
+.cat-modal-title small{font-size:10px;color:var(--gold);letter-spacing:1.5px;text-transform:uppercase;font-weight:500;}
+.cat-modal-actions{display:flex;align-items:center;gap:8px;}
+.cat-dl-btn{display:flex;align-items:center;gap:6px;padding:8px 16px;border-radius:16px;background:var(--dark);color:white;font-size:12px;font-weight:500;border:none;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:background .2s;}
+.cat-dl-btn:hover{background:#333;}
+.cat-dl-btn svg{width:13px;height:13px;}
+.cat-close-btn{width:34px;height:34px;border-radius:50%;background:var(--cream);border:0.5px solid var(--bd);cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--mid);font-size:18px;transition:all .2s;font-family:sans-serif;}
+.cat-close-btn:hover{background:var(--dark);color:white;}
+.cat-modal-body{flex:1;overflow:hidden;background:#f5f4f2;}
+.cat-modal-body iframe{width:100%;height:100%;border:none;display:block;}
+.cat-modal-body .cat-loading{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;gap:12px;color:var(--mid);}
+.cat-loading-spinner{width:32px;height:32px;border:2px solid var(--goldl);border-top-color:var(--gold);border-radius:50%;animation:spin .8s linear infinite;}
+@keyframes spin{to{transform:rotate(360deg)}}
+.cat-loading-text{font-size:13px;font-weight:300;}
+@media(max-width:768px){
+  .cat-modal{width:100vw;height:100vh;border-radius:0;}
+  .brand-header-top{flex-direction:column;gap:12px;}
+  .catalog-btn{align-self:flex-start;}
+}
 .brand-header-name{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:600;margin-bottom:6px;}
 .brand-header-desc{font-size:13px;color:var(--mid);font-weight:300;}
 .cat-tabs{display:flex;gap:8px;margin-bottom:28px;flex-wrap:wrap;}
@@ -515,8 +546,16 @@ html,body{margin:0;padding:0;}
     </div>
     <div class="brand-content" id="brand-content">
       <div class="brand-header">
-        <div class="brand-header-name">K.Solegio</div>
-        <div class="brand-header-desc" data-ko="24K 골드 콜라겐 — 고보습 프리미엄 스킨케어 라인" data-en="24K Gold Collagen — Premium High-Moisturizing Skincare Line" data-vi="Dòng dưỡng da cao cấp 24K Gold Collagen">24K 골드 콜라겐 — 고보습 프리미엄 스킨케어 라인</div>
+        <div class="brand-header-top">
+          <div>
+            <div class="brand-header-name">K.Solegio</div>
+            <div class="brand-header-desc" data-ko="24K 골드 콜라겐 — 고보습 프리미엄 스킨케어 라인" data-en="24K Gold Collagen — Premium High-Moisturizing Skincare Line" data-vi="Dòng dưỡng da cao cấp 24K Gold Collagen">24K 골드 콜라겐 — 고보습 프리미엄 스킨케어 라인</div>
+          </div>
+          <button class="catalog-btn" onclick="openCatalog()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="11" x2="12" y2="17"/><line x1="9" y1="14" x2="15" y2="14"/></svg>
+            <span data-ko="카탈로그 보기" data-en="View Catalog" data-vi="Xem danh mục">카탈로그 보기</span>
+          </button>
+        </div>
       </div>
       <div class="cat-tabs">
         <div class="cat-tab on" onclick="filterCat('all',this)" data-ko="전체" data-en="All" data-vi="Tất cả">전체</div>
@@ -706,6 +745,33 @@ html,body{margin:0;padding:0;}
   </div>
 </div>
 
+</div>
+
+<!-- 카탈로그 모달 -->
+<div class="cat-modal-bg" id="catModalBg" onclick="closeCatalogBg(event)">
+  <div class="cat-modal">
+    <div class="cat-modal-head">
+      <div class="cat-modal-title">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A96E" stroke-width="1.5" stroke-linecap="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        <span>LINKO Cosmetic</span>
+        <small>2026 CATALOG</small>
+      </div>
+      <div class="cat-modal-actions">
+        <a href="catalog.pdf" download="LINKO_Cosmetic_Catalog_2026.pdf" class="cat-dl-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <span data-ko="다운로드" data-en="Download" data-vi="Tải xuống">다운로드</span>
+        </a>
+        <button class="cat-close-btn" onclick="closeCatalog()">✕</button>
+      </div>
+    </div>
+    <div class="cat-modal-body">
+      <div class="cat-loading" id="catLoading">
+        <div class="cat-loading-spinner"></div>
+        <div class="cat-loading-text" data-ko="카탈로그 불러오는 중..." data-en="Loading catalog..." data-vi="Đang tải...">카탈로그 불러오는 중...</div>
+      </div>
+      <iframe id="catFrame" src="" style="display:none;" onload="onCatalogLoad()"></iframe>
+    </div>
+  </div>
 </div>
 
 <!-- FLOATING -->
@@ -926,6 +992,31 @@ function filterCat(cat,el){
   document.querySelectorAll('.cat-tab').forEach(t=>t.classList.remove('on'));
   el.classList.add('on');
   document.querySelectorAll('#brand-grid .pc').forEach(c=>{c.style.display=(cat==='all'||c.dataset.cat===cat)?'block':'none';});
+}
+
+// ── 카탈로그 모달 ──
+function openCatalog(){
+  const bg=document.getElementById('catModalBg');
+  const frame=document.getElementById('catFrame');
+  const loading=document.getElementById('catLoading');
+  bg.classList.add('show');
+  document.body.style.overflow='hidden';
+  if(!frame.src || frame.src==='about:blank' || frame.src===''){
+    loading.style.display='flex';
+    frame.style.display='none';
+    frame.src='catalog.pdf';
+  }
+}
+function closeCatalog(){
+  document.getElementById('catModalBg').classList.remove('show');
+  document.body.style.overflow='';
+}
+function closeCatalogBg(e){
+  if(e.target===document.getElementById('catModalBg')) closeCatalog();
+}
+function onCatalogLoad(){
+  document.getElementById('catLoading').style.display='none';
+  document.getElementById('catFrame').style.display='block';
 }
 
 // ── 공지사항 ──
