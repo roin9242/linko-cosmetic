@@ -7,7 +7,7 @@
 <meta name="description" content="LINKO Cosmetic connects premium Korean cosmetic manufacturers with global sellers.">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400&family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box;}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
 html,body{margin:0;padding:0;}
 :root{--cream:#FAF8F5;--dark:#111010;--gold:#C9A96E;--goldl:#E8D5B0;--goldp:#F5EDD8;--mid:#888580;--bd:rgba(0,0,0,0.07);}
 #app{position:relative;width:100%;font-family:'Noto Sans KR',sans-serif;}
@@ -145,8 +145,8 @@ html,body{margin:0;padding:0;}
 .catalog-btn svg{width:14px;height:14px;flex-shrink:0;}
 
 /* 카탈로그 모달 */
-.cat-modal-bg{position:fixed;inset:0;z-index:1000;background:rgba(0,0,0,.75);backdrop-filter:blur(4px);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s;}
-.cat-modal-bg.show{opacity:1;pointer-events:all;}
+.cat-modal-bg{position:fixed;inset:0;z-index:1000;background:rgba(0,0,0,.75);backdrop-filter:blur(4px);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;visibility:hidden;transition:opacity .3s,visibility .3s;}
+.cat-modal-bg.show{opacity:1;pointer-events:all;visibility:visible;}
 .cat-modal{background:white;border-radius:20px;width:90vw;max-width:860px;height:90vh;display:flex;flex-direction:column;overflow:hidden;transform:translateY(16px) scale(.97);transition:transform .3s;}
 .cat-modal-bg.show .cat-modal{transform:translateY(0) scale(1);}
 .cat-modal-head{display:flex;align-items:center;justify-content:space-between;padding:18px 24px;border-bottom:0.5px solid var(--bd);flex-shrink:0;}
@@ -773,7 +773,7 @@ html,body{margin:0;padding:0;}
         <div class="cat-loading-spinner"></div>
         <div class="cat-loading-text">카탈로그 불러오는 중...</div>
       </div>
-      <div id="catPages" style="display:none;overflow-y:auto;height:100%;padding:20px;display:flex;flex-direction:column;gap:12px;align-items:center;background:#888;"></div>
+      <div id="catPages" style="display:none;overflow-y:auto;height:100%;padding:20px;flex-direction:column;gap:12px;align-items:center;background:#888;"></div>
     </div>
   </div>
 </div>
