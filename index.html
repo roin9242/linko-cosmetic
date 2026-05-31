@@ -145,13 +145,11 @@ html,body{margin:0;padding:0;}
 .catalog-btn svg{width:14px;height:14px;flex-shrink:0;}
 
 /* 카탈로그 모달 */
-.cat-modal-bg{position:fixed;inset:0;z-index:1000;background:rgba(0,0,0,.75);backdrop-filter:blur(4px);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;visibility:hidden;transition:opacity .3s,visibility .3s;}
+.cat-modal-bg{position:fixed;top:0;left:0;right:0;bottom:0;z-index:9999;background:rgba(0,0,0,.8);display:flex;flex-direction:column;align-items:center;justify-content:flex-start;overflow-y:auto;-webkit-overflow-scrolling:touch;opacity:0;pointer-events:none;visibility:hidden;transition:opacity .25s,visibility .25s;}
 .cat-modal-bg.show{opacity:1;pointer-events:all;visibility:visible;}
-.cat-modal{background:white;border-radius:20px;width:90vw;max-width:860px;height:88vh;max-height:88vh;display:flex;flex-direction:column;overflow:hidden;transform:translateY(16px) scale(.97);transition:transform .3s;}
-.cat-modal-bg.show .cat-modal{transform:translateY(0) scale(1);}
-@supports(height:100dvh){
-  .cat-modal{height:88dvh;max-height:88dvh;}
-}
+.cat-modal{background:white;border-radius:16px;width:92vw;max-width:860px;display:flex;flex-direction:column;flex-shrink:0;overflow:hidden;margin:24px auto;transform:translateY(12px);transition:transform .25s;}
+.cat-modal-bg.show .cat-modal{transform:translateY(0);}
+.cat-modal-body{height:70vh;overflow:hidden;background:#f5f4f2;}
 .cat-modal-head{display:flex;align-items:center;justify-content:space-between;padding:18px 24px;border-bottom:0.5px solid var(--bd);flex-shrink:0;}
 .cat-modal-title{display:flex;align-items:center;gap:10px;}
 .cat-modal-title span{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;letter-spacing:.3px;}
@@ -169,15 +167,9 @@ html,body{margin:0;padding:0;}
 @keyframes spin{to{transform:rotate(360deg)}}
 .cat-loading-text{font-size:13px;font-weight:300;}
 @media(max-width:768px){
-  .cat-modal{
-    width:100vw;
-    height:100vh;
-    height:100dvh;
-    max-height:100dvh;
-    border-radius:0;
-    margin-top:0;
-    padding-top:env(safe-area-inset-top);
-  }
+  .cat-modal-bg{padding:0;}
+  .cat-modal{width:100vw;border-radius:0;margin:0;}
+  .cat-modal-body{height:calc(100vh - 70px);}
   .brand-header-top{flex-direction:column;gap:12px;}
   .catalog-btn{align-self:flex-start;}
 }
@@ -1023,7 +1015,9 @@ function filterCat(cat,el){
 // ── 카탈로그 모달 (PDF.js) ──
 let pdfLoaded=false;
 function openCatalog(){
-  document.getElementById('catModalBg').classList.add('show');
+  const bg=document.getElementById('catModalBg');
+  bg.classList.add('show');
+  bg.scrollTop=0;
   document.body.style.overflow='hidden';
   if(!pdfLoaded){ loadPdf(); }
 }
