@@ -1013,7 +1013,7 @@ function filterCat(cat,el){
 }
 
 // ── 카탈로그 모달 (PDF.js) ──
-let pdfLoaded=false;
+let pdfLoaded=false, pdfVersion='v2';
 function openCatalog(){
   const bg=document.getElementById('catModalBg');
   bg.classList.add('show');
@@ -1040,7 +1040,7 @@ function loadPdf(){
 }
 async function renderPdf(url){
   try{
-    const loadingTask=pdfjsLib.getDocument(url);
+    const loadingTask=pdfjsLib.getDocument(url+'?v='+pdfVersion);
     const pdf=await loadingTask.promise;
     const container=document.getElementById('catPages');
     const loading=document.getElementById('catLoading');
